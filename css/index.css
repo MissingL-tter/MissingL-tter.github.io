@@ -1,0 +1,40 @@
+.skills table {
+    border-top: 1px solid #ccc;
+}
+.skills table tr td {
+    padding-bottom: 0;
+}
+.skills ul {
+    border-top: 1px solid #ccc;
+}
+.skills ul li {
+    border-style: none;
+    padding-bottom: 0;
+}
+.skills ul li:last-child {
+    padding-bottom: 16px;
+}
+
+
+.education h4 {
+    margin-bottom: 0;
+}
+.education h5 {
+    margin-top: 0;
+}
+.education ul {
+    border-top: 1px solid #ccc;
+}
+.education ul li {
+    border-style: none;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.education ul li:first-child {
+    border-style: none;
+    padding-top: 8px;
+}
+.education ul li:last-child {
+    border-style: none;
+    padding-bottom: 16px;
+}

@@ -2,36 +2,32 @@
 <html>
 <title>Simple Resume</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/index.css">
 <link rel="stylesheet" href="css/w3.css">
     <body>
 
         <!-- Fixed Info Pane -->
         <div class="w3-top w3-panel w3-white w3-mobile" style="width: 50%">
-
             <div class="w3-center">
                 <h2>Christopher Desmond</h2>
-                <h4>434a44@gmail.com</h4>
+                <h3>Developer</h3>
+                <h3>434a44@gmail.com</h3>
             </div>
-
             <div class="w3-bar">
                 <h4><a href="/" class="w3-bar-item w3-button w3-border" style="width: 50%">About</a></h4>
                 <h4><a href="projects.html" class="w3-bar-item w3-button" style="width: 50%">Projects</a></h4>
             </div>
-            
         </div>
 
         <!-- Fixed Footer -->
         <div class="w3-bottom w3-container w3-white" style="width: 50%">
-
             <div class="w3-row w3-container">
-
                 <div class="w3-col l3 m6 w3-hide-small">
                     <h6 class="w3-opacity">
                         <img src="icons/github.svg" width="24px" height="24px" style="display:inline"/>
                         <a href="https://github.com/MissingL-tter/">MissingL-tter</a>
                     </h6>
                 </div>
-
                 <div class="w3-col l3 w3-hide-medium w3-hide-small">
                     <h6 class="w3-opacity">
                         <img src="icons/steam.ico" width="24px" height="24px" style="display:inline"/>
@@ -42,7 +38,6 @@
                         MissingLette
                     </h6>
                 </div>
-
                 <div class="w3-col l3 w3-hide-medium w3-hide-small">
                     <h6 class="w3-opacity">
                         <img src="icons/epicgames.ico" width="24px" height="24px" style="display:inline"/>
@@ -53,16 +48,13 @@
                         MissingLette
                     </h6>
                 </div>
-
                 <div class="w3-col l3 m6 w3-hide-small">
                     <h6 class="w3-opacity">
                         <img src="icons/twitter.png" width="24px" height="24px" style="display:inline"/>
                         <a href="https://twitter.com/MissingL_tter">MissingL_tter</a>
                     </h6>
                 </div>
-                
             </div>
-
         </div>
 
         <!-- Unfixed spacer behind Info pane -->
@@ -73,52 +65,50 @@
         <!-- Content -->
         <div class="w3-container w3-half">
 
-            <div class="w3-panel w3-responsive w3-card">
+            <!-- Skills -->
+            <div class="skills w3-panel w3-card">
                 <h3>Skills</h3>
-                <table class="w3-table w3-centered">
-                    <tr>
-                        <th>Languages</th><th>Topics</th><th>Systems</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <table class="w3-table">
-                                <tr>
-                                    <td>C++</td><td>C#</td>
-                                </tr>
-                                <tr>
-                                    <td>Kotlin</td><td>Java</td>
-                                </tr>
-                                <tr>
-                                    <td>Python</td><td>Matlab</td>
-                                </tr>
-                            </table>
-                        </td>
-                        <td>
-                            <table class="w3-table">
-                                <tr>
-                                    <td>Image Processing</td>
-                                </tr>
-                                <tr>
-                                    <td>Computer Vision</td>
-                                </tr>
-                                <tr>
-                                    <td>Machine Learning</td>
-                                </tr>
-                            </table>
-                        </td>
-                        <td>
-                            <table class="w3-table">
-                                <tr>
-                                    <td>Windows</td>
-                                </tr>
-                                <tr>
-                                    <td>Unix-like Systems</td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </table>
+                <div class="w3-third w3-center">
+                    <h4>Languages</h4>
+                    <table class="w3-table w3-centered">
+                        <tr><td>C++</td><td>C#</td></tr>
+                        <tr><td>Kotlin</td><td>Java</td></tr>
+                        <tr><td>Python</td><td>Ruby</td></tr>
+                        <tr><td>Go</td><td>Matlab</td></tr>
+                    </table>
+                </div>
+                <div class="w3-third w3-center">
+                    <h4>Topics</h4>
+                    <ul class="w3-ul">
+                        <li>Image Processing</li>
+                        <li>Computer Vision</li>
+                        <li>Machine Learning</li>
+                        <li>Game Development</li>
+                    </ul>
+                </div>
+                <div class="w3-third w3-center">
+                    <h4>Systems</h4>
+                    <ul class="w3-ul">
+                        <li>Windows</li>
+                        <li>Unix-like Systems</li>
+                    </ul>
+                </div> 
             </div>
+
+            <!-- Education -->
+            <div class="education w3-panel w3-card">
+                <h3>Education</h3>
+                <div class="w3-container">
+                    <h4>UNC Charlotte</h4>
+                    <h5>Bachelor of Science in Computer Science</h5>
+                    <ul class="w3-ul">
+                        <li>Concentration in Intelligent Systems</li>
+                        <li>Minor in Business</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Work Experience -->
 
         </div>
         
