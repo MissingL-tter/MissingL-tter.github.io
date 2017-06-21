@@ -57,38 +57,36 @@
         </div>
 
         <!-- Unfixed spacer behind Header and Footer -->
-        <div class="w3-container w3-col l6 m12 s12"></div>
+        <div class="w3-container w3-col l6 m12 s12" id="spacer"></div>
 
         <!-- Content -->
         <div class="w3-container w3-col l6 m12 s12" id="content">
-
             <div class="w3-panel w3-card">
                 <h3>Projects</h3>
                 <p>incoming...</p>
             </div>
-
         </div>
 
         <!-- Script to handle Content placement on small screens -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script>
-            function placeContent() {
-                if ($(window).width() < 601) {
+            function positionContent() {
+                if ($(window).width() < 992) {
                     var topMargin = $('#header').position().top + $('#header').height();
-                    $('#content').css('margin-top',topMargin);
+                    $('#content').css('margin-top', topMargin);
                     var bottomMargin = $('#footer').height();
-                    $('#content').css('margin-bottom',bottomMargin);
+                    $('#content').css('margin-bottom', bottomMargin);
                 } else {
-                    $('#content').css('margin-top',0);
-                    $('#content').css('margin-bottom',0);
+                    $('#content').css('margin-top', 0);
+                    $('#content').css('margin-bottom', 0);
                 }
             }
 
             $(document).ready(function(){
-                placeContent();
+                positionContent();
             });
             $(window).resize(function() {
-                placeContent();
+                positionContent();
             });
         </script>
         
