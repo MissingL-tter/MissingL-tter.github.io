@@ -7,7 +7,7 @@
     <body>
 
         <!-- Fixed Header -->
-        <div class="w3-top w3-container w3-white w3-mobile" style="width: 50%" id="header">
+        <div class="w3-top w3-container w3-col l6 m12 s12 w3-white" id="header">
             <div class="w3-center w3-padding-16">
                 <h2 class="w3-border-bottom">Christopher Desmond</h2>
                 <h4>Developer</h4>
@@ -19,7 +19,7 @@
         </div>
 
         <!-- Fixed Footer -->
-        <div class="w3-bottom w3-container w3-white w3-mobile" style="width: 50%" id="footer">
+        <div class="w3-bottom w3-container w3-col l6 m12 s12 w3-white" id="footer">
             <h5 class="w3-center w3-opacity">434a44@gmail.com</h5>
             <div class="w3-row w3-container">
                 <div class="w3-col l3 m6 w3-hide-small">
@@ -58,13 +58,13 @@
         </div>
 
         <!-- Unfixed spacer behind Header and Footer -->
-        <div class="w3-container w3-half"></div>
+        <div class="w3-container w3-col l6 m12 s12" id="spacer"></div>
 
         <!-- Content -->
-        <div class="w3-container w3-half" id="content">
+        <div class="w3-container w3-col l6 m12 s12" id="content">
 
             <!-- Skills -->
-            <div class="skills w3-panel w3-card">
+            <div class="skills w3-panel w3-card w3-responsive">
                 <h3>Skills</h3>
                 <div class="w3-third w3-center">
                     <h4>Languages</h4>
@@ -115,8 +115,8 @@
                 <div class="w3-container">
                     <h4>Research Assistant</h4>
                     <div class="w3-row">
-                        <h5 class="w3-half w3-left-align">UNC Charlotte</h5>
-                        <h5 class="w3-half w3-right-align">May 2016 - July 2016</h5>
+                        <h5 class="w3-left">UNC Charlotte</h5>
+                        <h5 class="w3-right">May 2016 - July 2016</h5>
                     </div>
                     <ul class="w3-ul">
                         <li>Developed a GPU-accelerated Particle Filter.</li>
@@ -130,23 +130,28 @@
         <!-- Script to handle Content placement on small screens -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script>
-            function placeContent() {
-                if ($(window).width() < 601) {
+            function positionContent() {
+                if ($(window).width() < 992) {
+
                     var topMargin = $('#header').position().top + $('#header').height();
-                    $('#content').css('margin-top',topMargin);
+                    $('#content').css('margin-top', topMargin);
+
                     var bottomMargin = $('#footer').height();
-                    $('#content').css('margin-bottom',bottomMargin);
+                    $('#content').css('margin-bottom', bottomMargin);
+
                 } else {
-                    $('#content').css('margin-top',0);
-                    $('#content').css('margin-bottom',0);
+
+                    $('#content').css('margin-top', 0);
+                    $('#content').css('margin-bottom', 0);
+
                 }
             }
 
             $(document).ready(function(){
-                placeContent();
+                positionContent();
             });
             $(window).resize(function() {
-                placeContent();
+                positionContent();
             });
         </script>
 
