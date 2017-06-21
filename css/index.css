@@ -1,3 +1,4 @@
+/*Skills*/
 .skills table {
     border-top: 1px solid #ccc;
 }
@@ -15,7 +16,7 @@
     padding-bottom: 16px;
 }
 
-
+/*Education*/
 .education h4 {
     margin-bottom: 0;
 }
@@ -35,6 +36,30 @@
     padding-top: 8px;
 }
 .education ul li:last-child {
+    border-style: none;
+    padding-bottom: 16px;
+}
+
+/*Employment*/
+.employment h4 {
+    margin-bottom: 0;
+}
+.employment h5 {
+    margin-top: 0;
+}
+.employment ul {
+    border-top: 1px solid #ccc;
+}
+.employment ul li {
+    border-style: none;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.employment ul li:first-child {
+    border-style: none;
+    padding-top: 8px;
+}
+.employment ul li:last-child {
     border-style: none;
     padding-bottom: 16px;
 }
