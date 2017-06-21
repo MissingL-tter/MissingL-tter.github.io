@@ -132,18 +132,13 @@
         <script>
             function positionContent() {
                 if ($(window).width() < 992) {
-
                     var topMargin = $('#header').position().top + $('#header').height();
                     $('#content').css('margin-top', topMargin);
-
                     var bottomMargin = $('#footer').height();
                     $('#content').css('margin-bottom', bottomMargin);
-
                 } else {
-
                     $('#content').css('margin-top', 0);
                     $('#content').css('margin-bottom', 0);
-
                 }
             }
 
