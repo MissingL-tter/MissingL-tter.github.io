@@ -9,10 +9,10 @@
         <!-- Fixed Header -->
         <div class="w3-top w3-container w3-col l6 m12 s12 w3-white" id="header">
             <div class="w3-center w3-padding-16">
-                <h2 class="w3-border-bottom">Christopher Desmond</h2>
+                <h2>Christopher Desmond</h2>
                 <h4>Developer</h4>
             </div>
-            <div class="w3-bar w3-margin-16">
+            <div class="w3-bar w3-padding-16 w3-border-bottom">
                 <h4 style="margin:0"><a class="w3-bar-item w3-button w3-border" style="width: 50%">About</a></h4>
                 <h4 style="margin:0"><a href="projects.html" class="w3-bar-item w3-button" style="width: 50%">Projects</a></h4>
             </div>
@@ -20,35 +20,17 @@
 
         <!-- Fixed Footer -->
         <div class="w3-bottom w3-container w3-col l6 m12 s12 w3-white" id="footer">
-            <h5 class="w3-center w3-opacity">434a44@gmail.com</h5>
-            <div class="w3-row w3-container">
-                <div class="w3-col l3 m6 w3-hide-small">
+            <div class="w3-bar w3-border-top">
+                <h5 class="w3-center w3-opacity">434a44@gmail.com</h5>
+            </div>
+            <div class="w3-center w3-container">
+                <div class="w3-left w3-hide-small">
                     <h6 class="w3-opacity">
                         <img src="icons/github.svg" width="24px" height="24px" style="display:inline"/>
                         <a href="https://github.com/MissingL-tter/">MissingL-tter</a>
                     </h6>
                 </div>
-                <div class="w3-col l3 w3-hide-medium w3-hide-small">
-                    <h6 class="w3-opacity">
-                        <img src="icons/steam.ico" width="24px" height="24px" style="display:inline"/>
-                        MissingL_tter
-                    </h6>
-                    <h6 class="w3-opacity">
-                        <img src="icons/blizzard.ico" width="24px" height="24px" style="display:inline"/>
-                        MissingLette
-                    </h6>
-                </div>
-                <div class="w3-col l3 w3-hide-medium w3-hide-small">
-                    <h6 class="w3-opacity">
-                        <img src="icons/epicgames.ico" width="24px" height="24px" style="display:inline"/>
-                        MissingL_tter
-                    </h6>
-                    <h6 class="w3-opacity">
-                        <img src="icons/xbox.png" width="24px" height="24px" style="display:inline"/>
-                        MissingLette
-                    </h6>
-                </div>
-                <div class="w3-col l3 m6 w3-hide-small">
+                <div class="w3-right w3-hide-small">
                     <h6 class="w3-opacity">
                         <img src="icons/twitter.png" width="24px" height="24px" style="display:inline"/>
                         <a href="https://twitter.com/MissingL_tter">MissingL_tter</a>
@@ -119,8 +101,9 @@
                         <h5 class="w3-right">May 2016 - July 2016</h5>
                     </div>
                     <ul class="w3-ul">
-                        <li>Developed a GPU-accelerated Particle Filter.</li>
-                        <li>A tool for tracking objects in real-time video.</li>
+                        <li>Developed a GPU-accelerated Particle Filter for use in tracking moving objects in video.</li>
+                        <li>This was prototyped in Matlab and built in C++ using the ArrayFire library.</li>
+                        <li>Parallelizing for GPU significantly accelerated the task over conventional serial methods.</li>
                     </ul>
                 </div>
             </div>
