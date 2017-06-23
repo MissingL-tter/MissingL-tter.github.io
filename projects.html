@@ -2,52 +2,86 @@
 <html>
 <title>Simple Resume</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/index.css">
 <link rel="stylesheet" href="css/w3.css">
-    <body>
+<link rel="stylesheet" href="css/override.css">
+    <body class="body">
 
         <!-- Fixed Header -->
-        <div class="w3-top w3-container w3-col l6 m12 s12 w3-white" id="header">
+        <div id="header" class="w3-top w3-container w3-col l6 m12 s12 w3-white">
             <div class="w3-center w3-padding-16">
-                <h2>Christopher Desmond</h2>
-                <h4>Developer</h4>
+                <h2>
+                    Christopher Desmond
+                </h2>
+                <h4>
+                    Developer
+                </h4>
             </div>
-            <div class="w3-bar w3-padding-16 w3-border-bottom">
-                <h4 style="margin:0"><a href="/" class="w3-bar-item w3-button" style="width: 50%">About</a></h4>
-                <h4 style="margin:0"><a class="w3-bar-item w3-button w3-border" style="width: 50%">Projects</a></h4>
+            <div class="w3-bar w3-border-bottom w3-border-blue w3-padding-16">
+                <h4 style="margin: 0">
+                    <a href="/" class="w3-bar-item w3-button w3-hover-indigo" 
+                        style="width: 50%">
+                        About
+                    </a>
+                </h4>
+                <h4 style="margin: 0">
+                    <a class="w3-bar-item w3-button w3-border-bottom w3-border-blue w3-hover-indigo" style="width: 50%">
+                        Projects
+                    </a>
+                </h4>
             </div>
         </div>
 
         <!-- Fixed Footer -->
-        <div class="w3-bottom w3-container w3-col l6 m12 s12 w3-white" id="footer">
-            <div class="w3-bar w3-border-top">
-                <h5 class="w3-center w3-opacity">434a44@gmail.com</h5>
+        <div id="footer" class="w3-bottom w3-container w3-col l6 m12 s12 w3-white">
+            <div class="w3-bar w3-border-top w3-border-blue">
+                <h5 class="w3-center w3-opacity">
+                    434a44@gmail.com
+                </h5>
             </div>
             <div class="w3-center w3-container">
                 <div class="w3-left w3-hide-small">
                     <h6 class="w3-opacity">
-                        <img src="icons/github.svg" width="24px" height="24px" style="display:inline"/>
-                        <a href="https://github.com/MissingL-tter/">MissingL-tter</a>
+                        <img src="icons/github.svg" height="24px" width="24px" style="display:inline"/>
+                        <a href="https://github.com/MissingL-tter/">
+                            MissingL-tter
+                        </a>
                     </h6>
                 </div>
                 <div class="w3-right w3-hide-small">
                     <h6 class="w3-opacity">
-                        <img src="icons/twitter.png" width="24px" height="24px" style="display:inline"/>
-                        <a href="https://twitter.com/MissingL_tter">MissingL_tter</a>
+                        <img src="icons/twitter.png" height="24px" width="24px" style="display:inline"/>
+                        <a href="https://twitter.com/MissingL_tter">
+                            MissingL_tter
+                        </a>
                     </h6>
                 </div>
             </div>
         </div>
 
         <!-- Unfixed spacer behind Header and Footer -->
-        <div class="w3-container w3-col l6 m12 s12" id="spacer"></div>
+        <div class="w3-container w3-col l6 m12 s12"></div>
+
+        <!-- Left Content -->
+        <div id="leftContent" class="w3-container w3-col l6 m12 s12 w3-center" style="position:fixed">
+            <a href="resume.pdf" class="w3-button w3-border w3-blue w3-hover-indigo">
+                PDF Resume
+            </a>
+        </div>
 
         <!-- Content -->
         <div class="w3-container w3-col l6 m12 s12" id="content">
 
             <div class="w3-panel w3-card">
-                <h3>Projects</h3>
-                <p>incoming...</p>
+                <h3>GatherMate</h3>
+                <div class="w3-panel w3-col l6 m6 s6 w3-center">
+                    <img class="w3-image w3-round" src="photos/gathermate_1.png" height="640px" width="360px">
+                </div>
+                <ul class="w3-ul w3-col l6 m6 s6 w3-justify">
+                    <li>Developed in Android Studio (Java).</li>
+                    <li>Prototype application for spontaneous event scheduling.</li> 
+                    <li>Each user can create events that are visible to friends. Friends can be added via username or email.</li>
+                    <li>Clicking on an event opens the details activity and a map view.</li>
+                </div>
             </div>
 
         </div>
@@ -55,24 +89,30 @@
         <!-- Script to handle Content placement on small screens -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script>
-            function positionContent() {
+            respond();
+
+            $(window).resize(function() {
+                respond();
+            });
+
+            function respond() {
+                var topMargin = $('#header').position().top + $('#header').height();
+                var bottomMargin = $('#footer').height();
                 if ($(window).width() < 992) {
-                    var topMargin = $('#header').position().top + $('#header').height();
                     $('#content').css('margin-top', topMargin);
-                    var bottomMargin = $('#footer').height();
                     $('#content').css('margin-bottom', bottomMargin);
+                    $('#leftContent').css('display', 'none');
+
+                    $('#content *').css('border-color', '#ccc')
+
                 } else {
                     $('#content').css('margin-top', 0);
                     $('#content').css('margin-bottom', 0);
+                    $('#leftContent').css('display', 'inline');
+
+                    $('#content *').css('border-color', '#2196F3')
                 }
             }
-
-            $(document).ready(function(){
-                positionContent();
-            });
-            $(window).resize(function() {
-                positionContent();
-            });
         </script>
         
     </body>
