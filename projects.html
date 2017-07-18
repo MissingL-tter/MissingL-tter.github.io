@@ -8,54 +8,44 @@
 
         <!-- Fixed Header -->
         <div id="header" class="w3-top w3-container w3-col l6 m12 s12 w3-white">
-            <div class="w3-center w3-padding-16">
-                <h2>
-                    Christopher Desmond
-                </h2>
-                <h4>
-                    Developer
-                </h4>
+
+            <div class="w3-center">
+                <h2>Christopher Desmond</h2>
+                <h4>Developer</h4>
             </div>
-            <div class="w3-bar w3-border-bottom w3-border-blue w3-padding-16">
+
+            <div class="w3-bar w3-border-bottom w3-border-blue" style="padding-bottom: 16px">
                 <h4 style="margin: 0">
-                    <a href="/" class="w3-bar-item w3-button w3-hover-indigo" 
-                        style="width: 50%">
-                        About
-                    </a>
+                    <a href="/" class="w3-bar-item w3-button w3-hover-indigo" style="width: 50%">About</a>
                 </h4>
                 <h4 style="margin: 0">
-                    <a class="w3-bar-item w3-button w3-border-bottom w3-border-blue w3-hover-indigo" style="width: 50%">
-                        Projects
-                    </a>
+                    <a class="w3-bar-item w3-button w3-border-bottom w3-border-blue w3-hover-indigo" style="width: 50%">Projects</a>
                 </h4>
             </div>
+
         </div>
 
         <!-- Fixed Footer -->
         <div id="footer" class="w3-bottom w3-container w3-col l6 m12 s12 w3-white">
+
             <div class="w3-bar w3-border-top w3-border-blue">
-                <h5 class="w3-center w3-opacity">
-                    434a44@gmail.com
-                </h5>
+                <h5 class="w3-center w3-opacity" style="margin-bottom: 0">434a44@gmail.com</h5>
             </div>
-            <div class="w3-center w3-container">
-                <div class="w3-left w3-hide-small">
-                    <h6 class="w3-opacity">
-                        <img src="icons/github.svg" height="24px" width="24px" style="display:inline"/>
-                        <a href="https://github.com/MissingL-tter/">
-                            MissingL-tter
-                        </a>
-                    </h6>
-                </div>
-                <div class="w3-right w3-hide-small">
-                    <h6 class="w3-opacity">
-                        <img src="icons/twitter.png" height="24px" width="24px" style="display:inline"/>
-                        <a href="https://twitter.com/MissingL_tter">
-                            MissingL_tter
-                        </a>
-                    </h6>
-                </div>
+
+            <div class="w3-left w3-hide-small">
+                <h6 class="w3-opacity" style="margin-top:0">
+                    <img src="icons/github.svg" height="24px" width="24px" style="display:inline"/>
+                    <a href="https://github.com/MissingL-tter/">MissingL-tter</a>
+                </h6>
             </div>
+
+            <div class="w3-right w3-hide-small">
+                <h6 class="w3-opacity" style="margin-top:0">
+                    <img src="icons/twitter.png" height="24px" width="24px" style="display:inline"/>
+                    <a href="https://twitter.com/MissingL_tter">MissingL_tter</a>
+                </h6>
+            </div>
+
         </div>
 
         <!-- Unfixed spacer behind Header and Footer -->
@@ -63,25 +53,64 @@
 
         <!-- Left Content -->
         <div id="leftContent" class="w3-container w3-col l6 m12 s12 w3-center" style="position:fixed">
-            <a href="resume.pdf" class="w3-button w3-border w3-blue w3-hover-indigo">
-                PDF Resume
-            </a>
+
+            <a href="resume.pdf" class="w3-button w3-blue w3-hover-indigo">PDF Resume</a>
+
         </div>
 
         <!-- Content -->
         <div class="w3-container w3-col l6 m12 s12" id="content">
 
             <div class="w3-panel w3-card">
+
+                <h3>Particle Filter</h3>
+
+                <div class="w3-panel w3-display-container w3-center w3-col l6 m6 s6">
+
+                    <div class="filterSlides w3-display-container">
+                        <img class="w3-image w3-round" src="photos/filter_out_compressed.gif" height="640px" width="360px">
+                        <div class="w3-display-bottom w3-small" style="width:100%">Particle Filter tracking of an ant.</div>
+                    </div>
+                    
+                    <div class="filterSlides w3-display-container">
+                        <img class="w3-image w3-round" src="photos/filter_occlusion.gif" height="640px" width="360px">
+                        <div class="w3-display-bottom w3-small" style="width:100%">Occlusion demonstration while tracking a red ball.</div>
+                    </div>
+
+                    <div class="w3-button w3-display-left w3-hover-indigo" onclick="changeSlide(0, -1)">&#10094;</div>
+                    <div class="w3-button w3-display-right w3-hover-indigo" onclick="changeSlide(0, 1)">&#10095;</div>
+                </div>
+
+                <ul class="w3-ul w3-col l6 m6 s6">
+                    <li>Developed in C++ using the ArrayFire library.</li>
+                    <li>Tool for fast object tracking in video
+                </ul>
+
+            </div>
+
+            <div class="w3-panel w3-card">
+
                 <h3>GatherMate</h3>
-                <div class="w3-panel w3-col l6 m6 s6 w3-center">
-                    <img class="w3-image w3-round" src="photos/gathermate_1.png" height="640px" width="360px">
+
+                <div class="w3-panel w3-display-container w3-center w3-col l6 m6 s6">
+
+                    <div class="gatherSlides w3-display-container">
+                        <img class="w3-image w3-round" src="photos/gathermate_1.png" height="640px" width="360px">
+                        <div class="w3-display-bottom w3-small" style="width:100%">Main Activity</div>
+                    </div>
+
+                    <div class="w3-button w3-display-left w3-hover-indigo" onclick="changeSlide(1, -1)">&#10094;</div>
+                    <div class="w3-button w3-display-right w3-hover-indigo" onclick="changeSlide(1, 1)">&#10095;</div>
                 </div>
-                <ul class="w3-ul w3-col l6 m6 s6 w3-justify">
-                    <li>Developed in Android Studio (Java).</li>
-                    <li>Prototype application for spontaneous event scheduling.</li> 
+
+                <ul class="w3-ul w3-col l6 m6 s6">
+                    <li>Developed in Android Studio (Java) using Firebase and Google Maps API.</li>
+                    <li>This is a prototype application for spontaneous event scheduling.</li> 
                     <li>Each user can create events that are visible to friends. Friends can be added via username or email.</li>
-                    <li>Clicking on an event opens the details activity and a map view.</li>
-                </div>
+                    <li>Clicking on an event opens the details activity that contains a map view and other information about the event. Navigation to the event can be started from the map view.</li>
+                    <li style="text-align:center"><a href="https://github.com/MissingL-tter/GatherMate" class="w3-button w3-blue w3-hover-indigo">Repository</a></li>
+                </ul>
+
             </div>
 
         </div>
@@ -112,6 +141,34 @@
 
                     $('#content *').css('border-color', '#2196F3')
                 }
+            }
+        </script>
+
+        <!-- Script to handle slides for each project -->
+        <script>
+            index = [0, 0];
+            names = ["filterSlides", "gatherSlides"];
+            for (var i = 0; i < index.length; i++) {
+                showSlide(i, index[i]);
+            }
+
+            function changeSlide(id, n) {
+                showSlide(id, index[id] += n);
+            }
+
+            function showSlide(id, n) {
+                var slides = document.getElementsByClassName(names[id]);
+                for (var i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+
+                if (n >= slides.length) {
+                    index[id] = 0;
+                }    
+                if (n < 0) {
+                    index[id] = slides.length - 1;
+                }
+                slides[index[id]].style.display = "inline-block";
             }
         </script>
         
