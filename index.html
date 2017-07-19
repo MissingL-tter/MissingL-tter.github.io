@@ -27,7 +27,7 @@
         </div>
 
         <!-- Content -->
-        <div id="content" class="w3-container">
+        <div class="w3-container w3-content" id="content">
 
             <!-- Skills -->
             <div class="skills w3-panel w3-card w3-responsive">
@@ -119,35 +119,43 @@
         <!-- Script to handle Content placement on small screens -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script>
-            var title = $('#title');
-            var header = $('#header');
-            var content = $('#content');
-            var footer = $('#footer');
+            var $window = $(window);
+            var $title = $('#title');
+            var $header = $('#header');
+            var $content = $('#content');
+            var $footer = $('#footer');
+            var contentAdjust;
+            
+            positionContent();
 
-            $(window).ready(function() {
-                $('#content').css('margin-bottom', footer.height());
+            $window.resize(function() {
+                positionContent();
             });
 
-            $(window).resize(function() {
-                $('#content').css('margin-bottom', footer.height());
-            });
-
-            var topMargin;
-
-            $(window).scroll( function() {
+            $window.scroll( function() {
 
                 var top = $(this).scrollTop();
-                if (top >= header.position().top & title[0].style.display != "none") {
-                    title[0].style.display = "none";
-                    header[0].classList.add("w3-top");
-                    topMargin = title.height() + header.height();
-                    content.css('padding-top', topMargin);
-                } else if (top <= title.height()) {
-                    title[0].style.display = "block";
-                    header[0].classList.remove("w3-top");
-                    content.css('padding-top', 0);
+                if (top >= $header.position().top & $title[0].style.display != "none") {
+                    $title[0].style.display = "none";
+                    $header[0].classList.add("w3-top");
+                    contentAdjust = $title.height() + $header.height();
+                    $content.css('margin-top', contentAdjust);
+                } else if (top <= $title.height()) {
+                    $title[0].style.display = "block";
+                    $header[0].classList.remove("w3-top");
+                    $content.css('margin-top', 0);
                 }
             });
+            
+            function positionContent() {
+                $content.css('margin-bottom', $footer.height());
+
+                if($window.width() > 992) {
+                    $content.css('max-width','80%');
+                } else {
+                    $content.css('max-width','100%');
+                }
+            }
         </script>
 
     </body>
