@@ -6,15 +6,16 @@
 <link rel="stylesheet" href="css/override.css">
     <body class="body">
 
+        <!-- Title -->
+        <div id="title" class="w3-center">
+            <h2>Christopher Desmond</h2>
+            <h4>Developer</h4>
+        </div>
+
         <!-- Fixed Header -->
-        <div id="header" class="w3-top w3-container w3-col l6 m12 s12 w3-white">
+        <div id="header" class="w3-container w3-white">
 
-            <div class="w3-center">
-                <h2>Christopher Desmond</h2>
-                <h4>Developer</h4>
-            </div>
-
-            <div class="w3-bar w3-border-bottom w3-border-blue" style="padding-bottom: 16px">
+            <div id="buttons" class="w3-bar w3-border-bottom w3-border-blue" style="padding-bottom: 16px">
                 <h4 style="margin: 0">
                     <a href="/" class="w3-bar-item w3-button w3-hover-indigo" style="width: 50%">About</a>
                 </h4>
@@ -25,8 +26,62 @@
 
         </div>
 
+        <!-- Content -->
+        <div class="w3-container" id="content">
+
+            <!-- Particle Filter -->
+            <div class="w3-panel w3-card">
+                <h3>Particle Filter</h3>
+
+                <div class="w3-panel w3-display-container w3-center w3-col l6 m6 s12">
+
+                    <div class="filterSlides w3-display-container">
+                        <img class="w3-image w3-round" src="photos/filter_out_compressed.gif" height="640px" width="360px">
+                        <div class="w3-display-bottom w3-small" style="width:100%">Particle Filter tracking of an ant.</div>
+                    </div>
+                    
+                    <div class="filterSlides w3-display-container">
+                        <img class="w3-image w3-round" src="photos/filter_occlusion.gif" height="640px" width="360px">
+                        <div class="w3-display-bottom w3-small" style="width:100%">Occlusion demonstration while tracking a red ball.</div>
+                    </div>
+
+                    <div class="w3-button w3-display-left w3-hover-indigo" onclick="changeSlide(0, -1)">&#10094;</div>
+                    <div class="w3-button w3-display-right w3-hover-indigo" onclick="changeSlide(0, 1)">&#10095;</div>
+                </div>
+
+                <ul class="w3-ul w3-col l6 m6 s12">
+                    <li>Developed in C++ using the ArrayFire library.</li>
+                    <li>Tool for fast object tracking in video
+                </ul>
+            </div>
+
+            <!-- GatherMate -->
+            <div class="w3-panel w3-card">
+                <h3>GatherMate</h3>
+
+                <div class="w3-panel w3-display-container w3-center w3-col l6 m6 s12">
+
+                    <div class="gatherSlides w3-display-container">
+                        <img class="w3-image w3-round" src="photos/gathermate_1.png" height="640px" width="360px">
+                        <div class="w3-display-bottom w3-small" style="width:100%">Main Activity</div>
+                    </div>
+
+                    <div class="w3-button w3-display-left w3-hover-indigo" onclick="changeSlide(1, -1)">&#10094;</div>
+                    <div class="w3-button w3-display-right w3-hover-indigo" onclick="changeSlide(1, 1)">&#10095;</div>
+                </div>
+
+                <ul class="w3-ul w3-col l6 m6 s12">
+                    <li>Developed in Android Studio (Java) using Firebase and Google Maps API.</li>
+                    <li>This is a prototype application for spontaneous event scheduling.</li> 
+                    <li>Each user can create events that are visible to friends. Friends can be added via username or email.</li>
+                    <li>Clicking on an event opens the details activity that contains a map view and other information about the event. Navigation to the event can be started from the map view.</li>
+                    <li style="text-align:center"><a href="https://github.com/MissingL-tter/GatherMate" class="w3-button w3-blue w3-hover-indigo">Repository</a></li>
+                </ul>
+            </div>
+        </div>
+        
         <!-- Fixed Footer -->
-        <div id="footer" class="w3-bottom w3-container w3-col l6 m12 s12 w3-white">
+        <div id="footer" class="w3-bottom w3-container w3-white">
 
             <div class="w3-bar w3-border-top w3-border-blue">
                 <h5 class="w3-center w3-opacity" style="margin-bottom: 0">434a44@gmail.com</h5>
@@ -45,103 +100,40 @@
                     <a href="https://twitter.com/MissingL_tter">MissingL_tter</a>
                 </h6>
             </div>
-
-        </div>
-
-        <!-- Unfixed spacer behind Header and Footer -->
-        <div class="w3-container w3-col l6 m12 s12"></div>
-
-        <!-- Left Content -->
-        <div id="leftContent" class="w3-container w3-col l6 m12 s12 w3-center" style="position:fixed">
-
-            <a href="resume.pdf" class="w3-button w3-blue w3-hover-indigo">PDF Resume</a>
-
-        </div>
-
-        <!-- Content -->
-        <div class="w3-container w3-col l6 m12 s12" id="content">
-
-            <div class="w3-panel w3-card">
-
-                <h3>Particle Filter</h3>
-
-                <div class="w3-panel w3-display-container w3-center w3-col l6 m6 s6">
-
-                    <div class="filterSlides w3-display-container">
-                        <img class="w3-image w3-round" src="photos/filter_out_compressed.gif" height="640px" width="360px">
-                        <div class="w3-display-bottom w3-small" style="width:100%">Particle Filter tracking of an ant.</div>
-                    </div>
-                    
-                    <div class="filterSlides w3-display-container">
-                        <img class="w3-image w3-round" src="photos/filter_occlusion.gif" height="640px" width="360px">
-                        <div class="w3-display-bottom w3-small" style="width:100%">Occlusion demonstration while tracking a red ball.</div>
-                    </div>
-
-                    <div class="w3-button w3-display-left w3-hover-indigo" onclick="changeSlide(0, -1)">&#10094;</div>
-                    <div class="w3-button w3-display-right w3-hover-indigo" onclick="changeSlide(0, 1)">&#10095;</div>
-                </div>
-
-                <ul class="w3-ul w3-col l6 m6 s6">
-                    <li>Developed in C++ using the ArrayFire library.</li>
-                    <li>Tool for fast object tracking in video
-                </ul>
-
-            </div>
-
-            <div class="w3-panel w3-card">
-
-                <h3>GatherMate</h3>
-
-                <div class="w3-panel w3-display-container w3-center w3-col l6 m6 s6">
-
-                    <div class="gatherSlides w3-display-container">
-                        <img class="w3-image w3-round" src="photos/gathermate_1.png" height="640px" width="360px">
-                        <div class="w3-display-bottom w3-small" style="width:100%">Main Activity</div>
-                    </div>
-
-                    <div class="w3-button w3-display-left w3-hover-indigo" onclick="changeSlide(1, -1)">&#10094;</div>
-                    <div class="w3-button w3-display-right w3-hover-indigo" onclick="changeSlide(1, 1)">&#10095;</div>
-                </div>
-
-                <ul class="w3-ul w3-col l6 m6 s6">
-                    <li>Developed in Android Studio (Java) using Firebase and Google Maps API.</li>
-                    <li>This is a prototype application for spontaneous event scheduling.</li> 
-                    <li>Each user can create events that are visible to friends. Friends can be added via username or email.</li>
-                    <li>Clicking on an event opens the details activity that contains a map view and other information about the event. Navigation to the event can be started from the map view.</li>
-                    <li style="text-align:center"><a href="https://github.com/MissingL-tter/GatherMate" class="w3-button w3-blue w3-hover-indigo">Repository</a></li>
-                </ul>
-
-            </div>
-
         </div>
 
         <!-- Script to handle Content placement on small screens -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script>
-            respond();
+            var title = $('#title');
+            var header = $('#header');
+            var content = $('#content');
+            var footer = $('#footer');
 
-            $(window).resize(function() {
-                respond();
+            $(window).ready(function() {
+                $('#content').css('margin-bottom', footer.height());
             });
 
-            function respond() {
-                var topMargin = $('#header').position().top + $('#header').height();
-                var bottomMargin = $('#footer').height();
-                if ($(window).width() < 992) {
-                    $('#content').css('margin-top', topMargin);
-                    $('#content').css('margin-bottom', bottomMargin);
-                    $('#leftContent').css('display', 'none');
+            $(window).resize(function() {
+                $('#content').css('margin-bottom', footer.height());
+            });
 
-                    $('#content *').css('border-color', '#ccc')
+            var topMargin;
 
-                } else {
-                    $('#content').css('margin-top', 0);
-                    $('#content').css('margin-bottom', 0);
-                    $('#leftContent').css('display', 'inline');
+            $(window).scroll( function() {
 
-                    $('#content *').css('border-color', '#2196F3')
+                var top = $(this).scrollTop();
+                if (top >= header.position().top & title[0].style.display != "none") {
+                    title[0].style.display = "none";
+                    header[0].classList.add("w3-top");
+                    topMargin = title.height() + header.height();
+                    content.css('padding-top', topMargin);
+                } else if (top <= title.height()) {
+                    title[0].style.display = "block";
+                    header[0].classList.remove("w3-top");
+                    content.css('padding-top', 0);
                 }
-            }
+            });
         </script>
 
         <!-- Script to handle slides for each project -->

@@ -1,16 +1,6 @@
 /*Skills*/
-.skills table {
-    border-top-width: 1px;
-    border-top-style: solid;
-    border-color: #2196F3;
-}
 .skills table tr td {
     padding-bottom: 0;
-}
-.skills ul {
-    border-top-width: 1px;
-    border-top-style: solid;
-    border-top-color: #2196F3;
 }
 .skills ul li {
     border-style: none;
@@ -26,11 +16,6 @@
 }
 .education h5 {
     margin-top: 0;
-}
-.education ul {
-    border-top-width: 1px;
-    border-top-style: solid;
-    border-color: #2196F3;
 }
 .education ul li {
     border-style: none;
@@ -53,11 +38,6 @@
 .employment h5 {
     margin-top: 0;
 }
-.employment ul {
-    border-top-width: 1px;
-    border-top-style: solid;
-    border-color: #2196F3;
-}
 .employment ul li {
     border-style: none;
     padding-top: 0;
@@ -70,12 +50,4 @@
 .employment ul li:last-child {
     border-style: none;
     padding-bottom: 16px;
-}
-
-/*Left Content*/
-#leftContent {
-    position: absolute; 
-    top:50%;
-    left:0%; 
-    transform:translate(0%, -50%);
 }

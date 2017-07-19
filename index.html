@@ -6,77 +6,35 @@
 <link rel="stylesheet" href="css/override.css">
     <body class="body">
 
+        <!-- Title -->
+        <div id="title" class="w3-center">
+            <h2>Christopher Desmond</h2>
+            <h4>Developer</h4>
+        </div>
+
         <!-- Fixed Header -->
-        <div id="header" class="w3-top w3-container w3-col l6 m12 s12 w3-white">
-            <div class="w3-center">
-                <h2>
-                    Christopher Desmond
-                </h2>
-                <h4>
-                    Developer
-                </h4>
-            </div>
+        <div id="header" class="w3-container w3-white">
+
             <div class="w3-bar w3-border-bottom w3-border-blue" style="padding-bottom: 16px">
                 <h4 style="margin: 0">
-                    <a class="w3-bar-item w3-border-bottom w3-border-blue w3-button w3-hover-indigo" 
-                        style="width: 50%">
-                        About
-                    </a>
+                    <a class="w3-bar-item w3-button w3-border-bottom w3-border-blue w3-hover-indigo" style="width: 50%">About</a>
                 </h4>
                 <h4 style="margin: 0">
-                    <a href="projects.html" class="w3-bar-item w3-button w3-hover-indigo" style="width: 50%">
-                        Projects
-                    </a>
+                    <a href="projects.html" class="w3-bar-item w3-button w3-hover-indigo" style="width: 50%">Projects</a>
                 </h4>
             </div>
-        </div>
 
-        <!-- Fixed Footer -->
-        <div id="footer" class="w3-bottom w3-container w3-col l6 m12 s12 w3-white">
-            <div class="w3-bar w3-border-top w3-border-blue">
-                <h5 class="w3-center w3-opacity" style="margin-bottom: 0">
-                    434a44@gmail.com
-                </h5>
-            </div>
-            <div class="w3-left w3-hide-small">
-                <h6 class="w3-opacity" style="margin-top:0">
-                    <img src="icons/github.svg" height="24px" width="24px" style="display:inline"/>
-                    <a href="https://github.com/MissingL-tter/">
-                        MissingL-tter
-                    </a>
-                </h6>
-            </div>
-            <div class="w3-right w3-hide-small">
-                <h6 class="w3-opacity" style="margin-top:0">
-                    <img src="icons/twitter.png" height="24px" width="24px" style="display:inline"/>
-                    <a href="https://twitter.com/MissingL_tter">
-                        MissingL_tter
-                    </a>
-                </h6>
-            </div>
-        </div>
-
-        <!-- Unfixed spacer behind Header and Footer -->
-        <div class="w3-container w3-col l6 m12 s12"></div>
-
-        <!-- Left Content -->
-        <div id="leftContent" class="w3-container w3-col l6 m12 s12">
-            <div class="w3-center">
-                <a href="resume.pdf" class="w3-button w3-blue w3-hover-indigo">
-                    PDF Resume
-                </a>
-            </div>
         </div>
 
         <!-- Content -->
-        <div id="content" class="w3-container w3-col l6 m12 s12">
+        <div id="content" class="w3-container">
 
             <!-- Skills -->
             <div class="skills w3-panel w3-card w3-responsive">
                 <h3>Skills</h3>
                 <div class="w3-third w3-center">
                     <h4>Languages</h4>
-                    <table class="w3-table w3-centered">
+                    <table class="w3-table w3-centered w3-border-top">
                         <tr><td>C++</td><td>C#</td></tr>
                         <tr><td>Kotlin</td><td>Java</td></tr>
                         <tr><td>Python</td><td>Ruby</td></tr>
@@ -85,7 +43,7 @@
                 </div>
                 <div class="w3-third w3-center">
                     <h4>Experience</h4>
-                    <ul class="w3-ul">
+                    <ul class="w3-ul w3-border-top">
                         <li>Image Processing</li>
                         <li>Computer Vision</li>
                         <li>Machine Learning</li>
@@ -94,7 +52,7 @@
                 </div>
                 <div class="w3-third w3-center">
                     <h4>Environments</h4>
-                    <ul class="w3-ul">
+                    <ul class="w3-ul w3-border-top">
                         <li>Unity</li>
                         <li>Unreal Engine</li>
                         <li>Android Studio</li>
@@ -109,7 +67,7 @@
                 <div class="w3-container">
                     <h4>Bachelor of Science, Computer Science</h4>
                     <h5>UNC Charlotte</h5>
-                    <ul class="w3-ul">
+                    <ul class="w3-ul w3-border-top">
                         <li>Concentration in Intelligent Systems</li>
                         <li>Minor in Business</li>
                         <li>3.5 GPA</li>
@@ -126,7 +84,7 @@
                         <h5 class="w3-left">UNC Charlotte</h5>
                         <h5 class="w3-right">May 2016 - July 2016</h5>
                     </div>
-                    <ul class="w3-ul">
+                    <ul class="w3-ul w3-border-top">
                         <li>Developed a GPU-accelerated Particle Filter for use in tracking moving objects in video.</li>
                         <li>Parallelizing for GPU significantly accelerated the task over conventional serial methods.</li>
                         <li>Built in C++ using the ArrayFire library</li>
@@ -134,36 +92,62 @@
                     </ul>
                 </div>
             </div>
+        </div>
 
+        <!-- Fixed Footer -->
+        <div id="footer" class="w3-bottom w3-container w3-white">
+
+            <div class="w3-bar w3-border-top w3-border-blue">
+                <h5 class="w3-center w3-opacity" style="margin-bottom: 0">434a44@gmail.com</h5>
+            </div>
+
+            <div class="w3-left w3-hide-small">
+                <h6 class="w3-opacity" style="margin-top:0">
+                    <img src="icons/github.svg" height="24px" width="24px" style="display:inline"/>
+                    <a href="https://github.com/MissingL-tter/">MissingL-tter</a>
+                </h6>
+            </div>
+
+            <div class="w3-right w3-hide-small">
+                <h6 class="w3-opacity" style="margin-top:0">
+                    <img src="icons/twitter.png" height="24px" width="24px" style="display:inline"/>
+                    <a href="https://twitter.com/MissingL_tter">MissingL_tter</a>
+                </h6>
+            </div>
         </div>
 
         <!-- Script to handle Content placement on small screens -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script>
-            respond();
+            var title = $('#title');
+            var header = $('#header');
+            var content = $('#content');
+            var footer = $('#footer');
 
-            $(window).resize(function() {
-                respond();
+            $(window).ready(function() {
+                $('#content').css('margin-bottom', footer.height());
             });
 
-            function respond() {
-                var topMargin = $('#header').position().top + $('#header').height();
-                var bottomMargin = $('#footer').height();
-                if ($(window).width() < 992) {
-                    $('#content').css('margin-top', topMargin);
-                    $('#content').css('margin-bottom', bottomMargin);
-                    $('#leftContent').css('display', 'none');
+            $(window).resize(function() {
+                $('#content').css('margin-bottom', footer.height());
+            });
 
-                    $('#content *').css('border-color', '#ccc')
+            var topMargin;
 
-                } else {
-                    $('#content').css('margin-top', 0);
-                    $('#content').css('margin-bottom', 0);
-                    $('#leftContent').css('display', 'inline');
+            $(window).scroll( function() {
 
-                    $('#content *').css('border-color', '#2196F3')
+                var top = $(this).scrollTop();
+                if (top >= header.position().top & title[0].style.display != "none") {
+                    title[0].style.display = "none";
+                    header[0].classList.add("w3-top");
+                    topMargin = title.height() + header.height();
+                    content.css('padding-top', topMargin);
+                } else if (top <= title.height()) {
+                    title[0].style.display = "block";
+                    header[0].classList.remove("w3-top");
+                    content.css('padding-top', 0);
                 }
-            }
+            });
         </script>
 
     </body>
