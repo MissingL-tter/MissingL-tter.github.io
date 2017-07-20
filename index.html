@@ -95,7 +95,7 @@
         </div>
 
         <!-- Fixed Footer -->
-        <div id="footer" class="w3-bottom w3-container w3-white">
+        <div id="footer" class="w3-container w3-white">
 
             <div class="w3-bar w3-border-top w3-border-blue">
                 <h5 class="w3-center w3-opacity" style="margin-bottom: 0">434a44@gmail.com</h5>
@@ -123,7 +123,6 @@
             var $title = $('#title');
             var $header = $('#header');
             var $content = $('#content');
-            var $footer = $('#footer');
             var contentAdjust;
             
             positionContent();
@@ -148,8 +147,6 @@
             });
             
             function positionContent() {
-                $content.css('margin-bottom', $footer.height());
-
                 if($window.width() > 992) {
                     $content.css('max-width','80%');
                 } else {
