@@ -15,12 +15,12 @@
         <!-- Fixed Header -->
         <div id="header" class="w3-container w3-white">
 
-            <div class="w3-bar w3-border-bottom w3-border-blue" style="padding-bottom: 16px">
+            <div id="buttons" class="w3-bar w3-border-bottom w3-border-blue" style="padding-bottom: 16px">
                 <h4 style="margin: 0">
                     <a class="w3-bar-item w3-button w3-border-bottom w3-border-blue w3-hover-indigo" style="width: 50%">About</a>
                 </h4>
                 <h4 style="margin: 0">
-                    <a href="projects.html" class="w3-bar-item w3-button w3-hover-indigo" style="width: 50%">Projects</a>
+                    <a  href="projects.html" class="w3-bar-item w3-button w3-hover-indigo" style="width: 50%">Projects</a>
                 </h4>
             </div>
 
@@ -28,6 +28,17 @@
 
         <!-- Content -->
         <div class="w3-container w3-content" id="content">
+
+            <!-- Information -->
+            <div class="info w3-panel w3-card">
+                <div class="w3-container w3-center">
+                    <ul class="w3-ul">
+                        <li>Motivated developer with a passion for gaming and intelligent computing.</li>
+                        <li>Recently graduated from UNCC and located in Durham, NC.</li>
+                        <li>Currently working on gameplay prototyping and extending my particle filter.</li>
+                    </ul>
+                </div>
+            </div>
 
             <!-- Skills -->
             <div class="skills w3-panel w3-card w3-responsive">
@@ -85,10 +96,39 @@
                         <h5 class="w3-right">May 2016 - July 2016</h5>
                     </div>
                     <ul class="w3-ul w3-border-top">
-                        <li>Developed a GPU-accelerated Particle Filter for use in tracking moving objects in video.</li>
-                        <li>Parallelizing for GPU significantly accelerated the task over conventional serial methods.</li>
+                        <li>Developed a GPU-accelerated Particle Filter for use in tracking moving objects in video</li>
+                        <li>Parallelizing for GPU significantly accelerated the task over conventional serial methods</li>
                         <li>Built in C++ using the ArrayFire library</li>
                         <li>Prototype built in Matlab</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Other Work Experience -->
+            <div class="employment w3-panel w3-card">
+                <h3>Other Employment</h3>
+                <div class="w3-container">
+                    <h4>E-3, Fireman</h4>
+                    <div class="w3-row">
+                        <h5 class="w3-left">United States Navy</h5>
+                        <h5 class="w3-right">Jan 2014 - Mar 2014</h5>
+                    </div>
+                    <ul class="w3-ul w3-border-top">
+                        <li>Electrician's Mate in the Nuclear Field</li>
+                        <li>Left with a medical separation</li>
+                    </ul>
+                </div>
+                <div class="w3-container">
+                    <h4>Manager</h4>
+                    <div class="w3-row">
+                        <h5 class="w3-left">Pizza Hut</h5>
+                        <h5 class="w3-right">Jan 2013 - Dec 2014</h5>
+                    </div>
+                    <ul class="w3-ul w3-border-top">
+                        <li>Managed the team members during my shift</li>
+                        <li>Handled opening and closing operations for the store</li>
+                        <li>Dealt with customers directly to resolve any quality or service issues they might have encountered</li>
+                        <li>Handled transactions and cash deposits</li>
                     </ul>
                 </div>
             </div>
@@ -123,7 +163,6 @@
             var $title = $('#title');
             var $header = $('#header');
             var $content = $('#content');
-            var contentAdjust;
             
             positionContent();
 
@@ -134,12 +173,11 @@
             $window.scroll( function() {
 
                 var top = $(this).scrollTop();
-                if (top >= $header.position().top & $title[0].style.display != "none") {
+                if (top > $header.position().top & $title[0].style.display != "none") {
                     $title[0].style.display = "none";
                     $header[0].classList.add("w3-top");
-                    contentAdjust = $title.height() + $header.height();
-                    $content.css('margin-top', contentAdjust);
-                } else if (top <= $title.height()) {
+                    $content.css('margin-top', $title.height() + $header.height());
+                } else if (top < $title.height()) {
                     $title[0].style.display = "block";
                     $header[0].classList.remove("w3-top");
                     $content.css('margin-top', 0);

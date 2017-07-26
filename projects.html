@@ -50,8 +50,12 @@
                 </div>
 
                 <ul class="w3-ul w3-col l8 m6 s12">
-                    <li>Developed in C++ using the ArrayFire library.</li>
-                    <li>Tool for fast object tracking in video
+                    <li>Developed in C++ using the ArrayFire library, Prototyping done in Matlab</li>
+                    <li>Developed a GPU-accelerated Particle Filter for use in tracking moving objects in video.
+                        As the goal here is maintaining accuracy while improving performance this particle filter model is based on a reference image of the object being tracked and can be used for many different applications.</li>
+                    <li>Parallelizing for GPU significantly accelerated the task over conventional serial methods.
+                        This is done by collecting the image patches for each particle in parallel and vectorizing the calculations that determine the probability that the object is located at that particle.</li>
+                    <li>Further works needs to be done to optimize for multi-object tracking and improve the robustness of the template matching.
                 </ul>
             </div>
 
@@ -72,9 +76,10 @@
 
                 <ul class="w3-ul w3-col l8 m6 s12">
                     <li>Developed in Android Studio (Java) using Firebase and Google Maps API.</li>
-                    <li>This is a prototype application for spontaneous event scheduling.</li> 
-                    <li>Each user can create events that are visible to friends. Friends can be added via username or email.</li>
-                    <li>Clicking on an event opens the details activity that contains a map view and other information about the event. Navigation to the event can be started from the map view.</li>
+                    <li>This is a prototype application for spontaneous event scheduling.
+                        Each user can create events that are visible to friends. Friends can be added via username or email and are shown any events that their friends create.</li>
+                    <li>Each event opens a details page that contains a map view and other information about the event. Navigation to the event can be started from the map view and will open in Google Maps.</li>
+                    <li>Timers countdown to indicate when an event starts. Colored travel times indicate whether you can make it to an event on time and are updated from current traffic conditions via the Maps API.</li>
                     <li style="text-align:center"><a href="https://github.com/MissingL-tter/GatherMate" class="w3-button w3-blue w3-hover-indigo">Repository</a></li>
                 </ul>
             </div>
@@ -109,7 +114,6 @@
             var $title = $('#title');
             var $header = $('#header');
             var $content = $('#content');
-            var contentAdjust;
             
             positionContent();
 
@@ -123,8 +127,7 @@
                 if (top >= $header.position().top & $title[0].style.display != "none") {
                     $title[0].style.display = "none";
                     $header[0].classList.add("w3-top");
-                    contentAdjust = $title.height() + $header.height();
-                    $content.css('margin-top', contentAdjust);
+                    $content.css('margin-top', $title.height() + $header.height());
                 } else if (top <= $title.height()) {
                     $title[0].style.display = "block";
                     $header[0].classList.remove("w3-top");

@@ -10,6 +10,21 @@
     padding-bottom: 16px;
 }
 
+/*Information*/
+.info ul li {
+    border-style: none;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.info ul li:first-child {
+    border-style: none;
+    padding-top: 16px;
+}
+.info ul li:last-child {
+    border-style: none;
+    padding-bottom: 16px;
+}
+
 /*Education*/
 .education h4 {
     margin-bottom: 0;
