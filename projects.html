@@ -1,3 +1,6 @@
+<!--Design and Scripting by Christopher Desmond
+    Using W3.CSS for most styling-->
+
 <!DOCTYPE html>
 <html>
 <title>Simple Resume</title>
@@ -7,13 +10,13 @@
     <body class="body">
 
         <!-- Title -->
-        <div id="title" class="w3-center">
+        <div class="w3-center" id="title">
             <h2>Christopher Desmond</h2>
-            <h4>Developer</h4>
+            <h5 class="w3-opacity">434a44@gmail.com</h5>
         </div>
 
         <!-- Fixed Header -->
-        <div id="header" class="w3-container w3-white">
+        <div class="w3-container w3-white" id="header">
 
             <div id="buttons" class="w3-bar w3-border-bottom w3-border-blue" style="padding-bottom: 16px">
                 <h4 style="margin: 0">
@@ -52,10 +55,11 @@
                 <ul class="w3-ul w3-col l8 m6 s12">
                     <li>Developed in C++ using the ArrayFire library, Prototyping done in Matlab</li>
                     <li>Developed a GPU-accelerated Particle Filter for use in tracking moving objects in video.
-                        As the goal here is maintaining accuracy while improving performance this particle filter model is based on a reference image of the object being tracked and can be used for many different applications.</li>
+                        This model is based on a template image of the object being tracked and can be used for many different applications.
+                        The goal was to maintain accuracy of tracking while reducing tracking times.</li>
                     <li>Parallelizing for GPU significantly accelerated the task over conventional serial methods.
                         This is done by collecting the image patches for each particle in parallel and vectorizing the calculations that determine the probability that the object is located at that particle.</li>
-                    <li>Further works needs to be done to optimize for multi-object tracking and improve the robustness of the template matching.
+                    <li>Further works needs to be done to optimize for multi-object tracking and improve the robustness of the template matching.</li>
                 </ul>
             </div>
 
@@ -70,8 +74,8 @@
                         <div class="w3-display-bottom w3-small" style="width:100%">Main Activity</div>
                     </div>
 
-                    <div class="w3-button w3-display-left w3-hover-indigo" onclick="changeSlide(1, -1)">&#10094;</div>
-                    <div class="w3-button w3-display-right w3-hover-indigo" onclick="changeSlide(1, 1)">&#10095;</div>
+                    <!-- <div class="w3-button w3-display-left w3-hover-indigo" onclick="changeSlide(1, -1)">&#10094;</div> -->
+                    <!-- <div class="w3-button w3-display-right w3-hover-indigo" onclick="changeSlide(1, 1)">&#10095;</div> -->
                 </div>
 
                 <ul class="w3-ul w3-col l8 m6 s12">
@@ -86,25 +90,20 @@
         </div>
         
         <!-- Fixed Footer -->
-        <div id="footer" class="w3-container w3-white">
-
-            <div class="w3-bar w3-border-top w3-border-blue">
-                <h5 class="w3-center w3-opacity" style="margin-bottom: 0">434a44@gmail.com</h5>
+        <div class="w3-container w3-center w3-border-top w3-border-blue w3-white" id="footer">
+            
+            <div class="w3-left w3-button w3-opacity w3-hide-small" style="margin-top: 8px; margin-bottom: 8px">
+                <img src="icons/github.svg" height="24px" width="24px" style="display:inline"/>
+                <a href="https://github.com/MissingL-tter/" style="text-decoration:none">MissingL-tter</a>
             </div>
 
-            <div class="w3-left w3-hide-small">
-                <h6 class="w3-opacity" style="margin-top:0">
-                    <img src="icons/github.svg" height="24px" width="24px" style="display:inline"/>
-                    <a href="https://github.com/MissingL-tter/">MissingL-tter</a>
-                </h6>
-            </div>
+            <a href="resume.pdf" class="w3-button w3-blue w3-hover-indigo" style="margin-top: 8px; margin-bottom: 8px">Resume</a>
 
-            <div class="w3-right w3-hide-small">
-                <h6 class="w3-opacity" style="margin-top:0">
-                    <img src="icons/twitter.png" height="24px" width="24px" style="display:inline"/>
-                    <a href="https://twitter.com/MissingL_tter">MissingL_tter</a>
-                </h6>
+            <div class="w3-right w3-button w3-opacity w3-hide-small" style="margin-top: 8px; margin-bottom: 8px">
+                <img src="icons/twitter.png" height="24px" width="24px" style="display:inline"/>
+                <a href="https://twitter.com/MissingL_tter" style="text-decoration:none">MissingL_tter</a>
             </div>
+            
         </div>
 
         <!-- Script to handle Content placement on small screens -->
