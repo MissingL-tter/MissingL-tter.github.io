@@ -3,10 +3,19 @@
 
 <!DOCTYPE html>
 <html>
-<title>C. Desmond</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/w3.css">
-<link rel="stylesheet" href="css/override.css">
+    <head>
+        <title>C. Desmond</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/w3.css">
+        <link rel="stylesheet" href="css/override.css">
+        <script src="js/jquery.min.js"></script>
+        <script> 
+            $(function(){
+                $("#particleModalContent").load("particleFilterExample.html");
+                console.log("here");
+            });
+        </script> 
+    </head>
     <body class="body">
 
         <!-- Title -->
@@ -60,6 +69,16 @@
                     <li>Parallelizing for GPU significantly accelerated the task over conventional serial methods.
                         This is done by collecting the image patches for each particle in parallel and vectorizing the calculations that determine the probability that the object is located at that particle.</li>
                     <li>Further works needs to be done to optimize for multi-object tracking and improve the robustness of the template matching.</li>
+                    <li style="text-align:center"><button onclick="document.getElementById('particleModal').style.display='block'" class="w3-button w3-blue w3-hover-indigo" style="text-align:center">Example</a></li>
+                    <div id="particleModal" class="w3-modal">
+                        <div class="w3-modal-content">
+                            <div class="w3-container">
+                                <span onclick="document.getElementById('particleModal').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                                <div id="particleModalContent"></div>
+                            </div>
+                        </div>
+                    </div>
+
                 </ul>
             </div>
 
@@ -107,7 +126,6 @@
         </div>
 
         <!-- Script to handle Content placement on small screens -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script>
             var $window = $(window);
             var $title = $('#title');
