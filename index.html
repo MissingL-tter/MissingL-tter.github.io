@@ -3,10 +3,13 @@
 
 <!DOCTYPE html>
 <html>
-<title>C. Desmond</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/w3.css">
-<link rel="stylesheet" href="css/override.css">
+    <head>
+        <title>C. Desmond</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/w3.css">
+        <link rel="stylesheet" href="styles/override.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
     <body class="body">
 
         <!-- Title -->
@@ -151,45 +154,9 @@
                 <img src="icons/twitter.png" height="24px" width="24px" style="display:inline"/>
                 <a href="https://twitter.com/MissingL_tter" style="text-decoration:none">MissingL_tter</a>
             </div>
-            
         </div>
 
         <!-- Script to handle Content placement on small screens -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <script>
-            var $window = $(window);
-            var $title = $('#title');
-            var $header = $('#header');
-            var $content = $('#content');
-            
-            positionContent();
-
-            $window.resize(function() {
-                positionContent();
-            });
-
-            $window.scroll( function() {
-
-                var top = $(this).scrollTop();
-                if (top > $header.position().top & $title[0].style.display != "none") {
-                    $title[0].style.display = "none";
-                    $header[0].classList.add("w3-top");
-                    $content.css('margin-top', $title.height() + $header.height());
-                } else if (top < $title.height()) {
-                    $title[0].style.display = "block";
-                    $header[0].classList.remove("w3-top");
-                    $content.css('margin-top', 0);
-                }
-            });
-            
-            function positionContent() {
-                if($window.width() > 992) {
-                    $content.css('max-width','80%');
-                } else {
-                    $content.css('max-width','100%');
-                }
-            }
-        </script>
-
+        <script src="scripts/responsive.js"></script>
     </body>
 </html>

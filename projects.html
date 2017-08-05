@@ -6,17 +6,12 @@
     <head>
         <title>C. Desmond</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/w3.css">
-        <link rel="stylesheet" href="css/prism.css">
-        <link rel="stylesheet" href="css/override.css">
-        <script src="js/prism.js"></script>
-        <script src="js/jquery.min.js"></script>
-        <script> 
-            $(function(){
-                $("#particleModalContent").load("particleFilterExample.html");
-                console.log("here");
-            });
-        </script>
+        <link rel="stylesheet" href="styles/w3.css">
+        <link rel="stylesheet" href="styles/override.css">
+        <link rel="stylesheet" href="styles/vs2015.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="scripts/highlight.pack.js"></script>
     </head>
     <body class="body">
 
@@ -49,12 +44,12 @@
 
                 <div class="w3-panel w3-display-container w3-center w3-col l4 m6 s12">
 
-                    <div class="filterSlides w3-display-container">
+                    <div class="particleSlides w3-display-container">
                         <img class="w3-image w3-round" src="photos/filter_out_compressed.gif" height="640px" width="360px">
                         <div class="w3-display-bottom w3-small" style="width:100%">Particle Filter tracking of an ant.</div>
                     </div>
                     
-                    <div class="filterSlides w3-display-container">
+                    <div class="particleSlides w3-display-container">
                         <img class="w3-image w3-round" src="photos/filter_occlusion.gif" height="640px" width="360px">
                         <div class="w3-display-bottom w3-small" style="width:100%">Occlusion demonstration while tracking a red ball.</div>
                     </div>
@@ -71,16 +66,8 @@
                     <li>Parallelizing for GPU significantly accelerated the task over conventional serial methods.
                         This is done by collecting the image patches for each particle in parallel and vectorizing the calculations that determine the probability that the object is located at that particle.</li>
                     <li>Further works needs to be done to optimize for multi-object tracking and improve the robustness of the template matching.</li>
-                    <li><button onclick="document.getElementById('particleModal').style.display='block'" class="w3-button w3-blue w3-hover-indigo" style="text-align:center">Example</button></li>
+                    <li><button class="w3-button w3-blue w3-hover-indigo w3-hide-small" id="particleButton">Example</button></li>
                 </ul>
-                <div class="w3-modal" id="particleModal">
-                    <div class="w3-modal-content">
-                        <div class="w3-container">
-                            <span onclick="document.getElementById('particleModal').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-                            <div id="particleModalContent"></div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <!-- GatherMate -->
@@ -123,75 +110,23 @@
                 <img src="icons/twitter.png" height="24px" width="24px" style="display:inline"/>
                 <a href="https://twitter.com/MissingL_tter" style="text-decoration:none">MissingL_tter</a>
             </div>
-            
         </div>
 
-        <!-- Script to handle Content placement on small screens -->
-        <script>
-            var $window = $(window);
-            var $title = $('#title');
-            var $header = $('#header');
-            var $content = $('#content');
-            var $modalContent = $('.w3-modal-content');
-            
-            positionContent();
+        <!-- Modals -->
+        <div class="modal" id="particleModal">
+            <div class="modalContainer">
+                <div id="particleModalContent"></div>
+                <button class="modalButton w3-button w3-blue" id="particleModalButton">&times</button>
+            </div>
+        </div>
 
-            $window.resize(function() {
-                positionContent();
-            });
-
-            $window.scroll( function() {
-
-                var top = $(this).scrollTop();
-                if (top >= $header.position().top & $title[0].style.display != "none") {
-                    $title[0].style.display = "none";
-                    $header[0].classList.add("w3-top");
-                    $content.css('margin-top', $title.height() + $header.height());
-                } else if (top <= $title.height()) {
-                    $title[0].style.display = "block";
-                    $header[0].classList.remove("w3-top");
-                    $content.css('margin-top', 0);
-                }
-            });
-            
-            function positionContent() {
-                if($window.width() > 992) {
-                    $content.css('max-width','80%');
-                    //$modalContent.css('width','80%');
-                } else {
-                    $content.css('max-width','100%');
-                    //$modalContent.css('width','100%');
-                }
-            }
-        </script>
-
-        <!-- Script to handle slides for each project -->
-        <script>
-            index = [0, 0];
-            names = ["filterSlides", "gatherSlides"];
-            for (var i = 0; i < index.length; i++) {
-                showSlide(i, index[i]);
-            }
-
-            function changeSlide(id, n) {
-                showSlide(id, index[id] += n);
-            }
-
-            function showSlide(id, n) {
-                var slides = document.getElementsByClassName(names[id]);
-                for (var i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-
-                if (n >= slides.length) {
-                    index[id] = 0;
-                }    
-                if (n < 0) {
-                    index[id] = slides.length - 1;
-                }
-                slides[index[id]].style.display = "inline-block";
-            }
-        </script>
+        <!-- Script to manage Modal loading -->
+        <script src="scripts/modalManager.js"></script>
         
+        <!-- Script to manage Content placement on small screens -->
+        <script src="scripts/responsive.js"></script>
+
+        <!-- Script to manage slides for each project -->
+        <script src="scripts/slideReel.js"></script>
     </body>
 </html>
