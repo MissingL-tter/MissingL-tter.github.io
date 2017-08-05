@@ -40,8 +40,10 @@
 
             <!-- Particle Filter -->
             <div class="w3-panel w3-card" style>
-                <h3>Particle Filter</h3>
-
+                <div class="w3-bar">
+                    <h3 class="w3-bar-item">Particle Filter</h3>
+                    <h5 class="w3-bar-item w3-button w3-right w3-blue w3-hover-indigo" id="particleButton">Example</h5>
+                </div>
                 <div class="w3-panel w3-display-container w3-center w3-col l4 m6 s12">
 
                     <div class="particleSlides w3-display-container">
@@ -66,13 +68,15 @@
                     <li>Parallelizing for GPU significantly accelerated the task over conventional serial methods.
                         This is done by collecting the image patches for each particle in parallel and vectorizing the calculations that determine the probability that the object is located at that particle.</li>
                     <li>Further works needs to be done to optimize for multi-object tracking and improve the robustness of the template matching.</li>
-                    <li><button class="w3-button w3-blue w3-hover-indigo w3-hide-small" id="particleButton">Example</button></li>
                 </ul>
             </div>
 
             <!-- GatherMate -->
             <div class="w3-panel w3-card">
-                <h3>GatherMate</h3>
+                <div class="w3-bar">
+                    <h3 class="w3-bar-item">GatherMate</h3>
+                    <h5><a href="https://github.com/MissingL-tter/GatherMate" class="w3-bar-item w3-button w3-right w3-blue w3-hover-indigo">Repository</a></h5>
+                </div>
 
                 <div class="w3-panel w3-display-container w3-center w3-col l4 m6 s12">
 
@@ -91,7 +95,6 @@
                         Each user can create events that are visible to friends. Friends can be added via username or email and are shown any events that their friends create.</li>
                     <li>Each event opens a details page that contains a map view and other information about the event. Navigation to the event can be started from the map view and will open in Google Maps.</li>
                     <li>Timers countdown to indicate when an event starts. Colored travel times indicate whether you can make it to an event on time and are updated from current traffic conditions via the Maps API.</li>
-                    <li style="text-align:center"><a href="https://github.com/MissingL-tter/GatherMate" class="w3-button w3-blue w3-hover-indigo">Repository</a></li>
                 </ul>
             </div>
         </div>
@@ -100,14 +103,14 @@
         <div class="w3-container w3-center w3-border-top w3-border-blue w3-white" id="footer">
             
             <div class="w3-left w3-button w3-opacity w3-hide-small" style="margin-top: 8px; margin-bottom: 8px">
-                <img src="icons/github.svg" height="24px" width="24px" style="display:inline"/>
+                <img src="icons/github.svg" height="24" width="24" style="display:inline"/>
                 <a href="https://github.com/MissingL-tter/" style="text-decoration:none">MissingL-tter</a>
             </div>
 
             <a href="resume.pdf" class="w3-button w3-blue w3-hover-indigo" style="margin-top: 8px; margin-bottom: 8px">Resume</a>
 
             <div class="w3-right w3-button w3-opacity w3-hide-small" style="margin-top: 8px; margin-bottom: 8px">
-                <img src="icons/twitter.png" height="24px" width="24px" style="display:inline"/>
+                <img src="icons/twitter.png" height="24" width="24" style="display:inline"/>
                 <a href="https://twitter.com/MissingL_tter" style="text-decoration:none">MissingL_tter</a>
             </div>
         </div>
