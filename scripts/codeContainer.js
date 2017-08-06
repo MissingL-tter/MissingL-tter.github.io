@@ -14,4 +14,6 @@ $('.codeButton').click(function() {
 
 $('.underlay').click(function() {
     $('.underlay').css('visibility', 'hidden');
+}).children().click(function() {
+    return false;
 });
