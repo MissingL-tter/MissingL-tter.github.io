@@ -67,8 +67,8 @@
     padding-bottom: 16px;
 }
 
-/*Modal*/
-.modal {
+/*Code Container*/
+.underlay {
     visibility: hidden;
     position: fixed;
     display: flex;
@@ -81,19 +81,20 @@
     background-color: rgba(0, 0, 0, .4);
     z-index: 1;
 }
-.modalContainer {
+.codeContainer {
     position: relative;
     height: 80%;
+    width: 80%;
     overflow-y: scroll;
 }
-.modalContainer pre {
+.codeContainer pre {
     margin: 0px;
 }
-.modalContainer pre code {
+.codeContainer pre code {
     padding: 1%;
     white-space: pre-wrap;
 }
-.modalButton {
+.codeButton {
     position: absolute;
     top: 0px;
     right: 0px;

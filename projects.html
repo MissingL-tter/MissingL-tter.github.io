@@ -9,9 +9,6 @@
         <link rel="stylesheet" href="styles/w3.css">
         <link rel="stylesheet" href="styles/override.css">
         <link rel="stylesheet" href="styles/vs2015.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script src="scripts/highlight.pack.js"></script>
     </head>
     <body class="body">
 
@@ -115,16 +112,19 @@
             </div>
         </div>
 
-        <!-- Modals -->
-        <div class="modal" id="particleModal">
-            <div class="modalContainer">
-                <div id="particleModalContent"></div>
-                <button class="modalButton w3-button w3-blue" id="particleModalButton">&times</button>
+        <!-- Code Containers -->
+        <div class="underlay" id="particleCode">
+            <div class="codeContainer">
+                <div id="particleCodeContent"></div>
+                <button class="codeButton w3-button w3-blue">&times</button>
             </div>
         </div>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="scripts/highlight.pack.js"></script>
+
         <!-- Script to manage Modal loading -->
-        <script src="scripts/modalManager.js"></script>
+        <script src="scripts/codeContainer.js"></script>
         
         <!-- Script to manage Content placement on small screens -->
         <script src="scripts/responsive.js"></script>
