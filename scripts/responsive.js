@@ -2,7 +2,7 @@ var $window = $(window);
 var $title = $('#title');
 var $header = $('#header');
 var $content = $('#content');
-$modalContainer = $('.modalContainer');
+$codeContainer = $('.codeContainer');
 
 positionContent();
 
@@ -27,9 +27,9 @@ $window.scroll( function() {
 function positionContent() {
     if($window.width() > 992) {
         $content.css('max-width','80%');
-        $modalContainer.css('width','80%');
+        $codeContainer.css('width','80%');
     } else {
         $content.css('max-width','100%');
-        $modalContainer.css('width','100%');
+        $codeContainer.css('width','100%');
     }
 }
