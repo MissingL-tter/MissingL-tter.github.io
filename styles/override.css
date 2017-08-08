@@ -85,17 +85,26 @@
     position: relative;
     height: 80%;
     width: 80%;
-    overflow-y: scroll;
 }
-.codeContainer pre {
+.codeContainer .codeContent {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+}
+.codeContainer .codeContent pre {
     margin: 0px;
 }
-.codeContainer pre code {
+.codeContainer .codeContent pre code {
     padding: 1%;
     white-space: pre-wrap;
 }
-.codeButton {
+.codeContainer .codeButton {
     position: absolute;
     top: 0px;
-    right: 0px;
+    right: 17px;
+}
+@media screen and (maxwidth: 992) {
+    .codeContainer .codeButton {
+        right: 0px;
+    }
 }
