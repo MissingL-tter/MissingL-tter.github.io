@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/missingl_tter
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://missingl-tter.github.io
+  * I am missingl_tter (https://keybase.io/missingl_tter) on keybase.
+  * I have a public key ASAsewCm7xcjBpo0EH91Hh4nUXRq_gbHFWI80U2hHdbFOwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01202c7b00a6ef1723069a34107f751e1e2751746afe06c715623cd14da11dd6c53b0a",
+      "host": "keybase.io",
+      "kid": "01202c7b00a6ef1723069a34107f751e1e2751746afe06c715623cd14da11dd6c53b0a",
+      "uid": "b7d945ac5d17eb4b41969a80d53b7719",
+      "username": "missingl_tter"
+    },
+    "merkle_root": {
+      "ctime": 1502237151,
+      "hash": "a28577ecc850f9940ab4546e5cf4667698d28177d60b5a15cea98ee4f5bee45b64d5be1a1009877e6ead293ae5630b9597a0aba0e5dbb6aecda812abbdccbcb5",
+      "hash_meta": "7f0ec8324512ad35762e48a4f73a10f725df8208630763f5178999a7ed536fab",
+      "seqno": 1314106
+    },
+    "service": {
+      "hostname": "missingl-tter.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.26"
+  },
+  "ctime": 1502237232,
+  "expire_in": 504576000,
+  "prev": "11ed8d2a9ce71db77b4d7a839b00a69399ff4aaf4dc7ace5488ffddf244bfa58",
+  "seqno": 6,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgLHsApu8XIwaaNBB/dR4eJ1F0av4GxxViPNFNoR3WxTsKp3BheWxvYWTFA1R7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwMmM3YjAwYTZlZjE3MjMwNjlhMzQxMDdmNzUxZTFlMjc1MTc0NmFmZTA2YzcxNTYyM2NkMTRkYTExZGQ2YzUzYjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMmM3YjAwYTZlZjE3MjMwNjlhMzQxMDdmNzUxZTFlMjc1MTc0NmFmZTA2YzcxNTYyM2NkMTRkYTExZGQ2YzUzYjBhIiwidWlkIjoiYjdkOTQ1YWM1ZDE3ZWI0YjQxOTY5YTgwZDUzYjc3MTkiLCJ1c2VybmFtZSI6Im1pc3NpbmdsX3R0ZXIifSwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE1MDIyMzcxNTEsImhhc2giOiJhMjg1NzdlY2M4NTBmOTk0MGFiNDU0NmU1Y2Y0NjY3Njk4ZDI4MTc3ZDYwYjVhMTVjZWE5OGVlNGY1YmVlNDViNjRkNWJlMWExMDA5ODc3ZTZlYWQyOTNhZTU2MzBiOTU5N2EwYWJhMGU1ZGJiNmFlY2RhODEyYWJiZGNjYmNiNSIsImhhc2hfbWV0YSI6IjdmMGVjODMyNDUxMmFkMzU3NjJlNDhhNGY3M2ExMGY3MjVkZjgyMDg2MzA3NjNmNTE3ODk5OWE3ZWQ1MzZmYWIiLCJzZXFubyI6MTMxNDEwNn0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJtaXNzaW5nbC10dGVyLmdpdGh1Yi5pbyIsInByb3RvY29sIjoiaHR0cHM6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjI2In0sImN0aW1lIjoxNTAyMjM3MjMyLCJleHBpcmVfaW4iOjUwNDU3NjAwMCwicHJldiI6IjExZWQ4ZDJhOWNlNzFkYjc3YjRkN2E4MzliMDBhNjkzOTlmZjRhYWY0ZGM3YWNlNTQ4OGZmZGRmMjQ0YmZhNTgiLCJzZXFubyI6NiwidGFnIjoic2lnbmF0dXJlIn2jc2lnxEDrD3l9OhtDyJPbDrjbnR310GN7SNfy90Ilf+oONfNW3opEDnEVJ7A9z3+3FpqlmUcxr2DxgLFOVYnmp3zBqgUMqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQgeNXRdcPLnOt2KRcsnepQRuXEhKhlrh9CFGvL8CsqnXqjdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/missingl_tter
+
+==================================================================
