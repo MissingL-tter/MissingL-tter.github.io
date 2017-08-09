@@ -1,16 +1,7 @@
-var $window = $(window);
-var $title = $('#title');
-var $header = $('#header');
-var $content = $('#content');
-$codeContainer = $('.codeContainer');
+var $title = $('.title');
+var $header = $('.header');
 
-positionContent();
-
-$window.resize(function() {
-    positionContent();
-});
-
-$window.scroll( function() {
+$(window).scroll( function() {
 
     var top = $(this).scrollTop();
     if (top >= $header.position().top & $title[0].style.display != "none") {
@@ -23,13 +14,3 @@ $window.scroll( function() {
         $content.css('margin-top', 0);
     }
 });
-
-function positionContent() {
-    if($window.width() > 992) {
-        $content.css('max-width','80%');
-        $codeContainer.css('width','80%');
-    } else {
-        $content.css('max-width','100%');
-        $codeContainer.css('width','100%');
-    }
-}

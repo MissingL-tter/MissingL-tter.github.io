@@ -1,0 +1,99 @@
+/*Content*/
+.content {
+    max-width: 80%;
+}
+
+.education h4, .employment h4 {
+    margin-bottom: 0;
+}
+.education h5, .employment h5 {
+    margin-top: 0;
+}
+.skills table tr td, .skills ul li, .info ul li, .education ul li, .employment ul li {
+    border-style: none;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.skills table tr:first-child td, .skills ul li:first-child, .info ul li:first-child, .education ul li:first-child, .employment ul li:first-child {
+    border-style: none;
+    padding-top: 8px;
+}
+.skills table tr:last-child td, .skills ul li:last-child, .info ul li:last-child, .education ul li:last-child, .employment ul li:last-child {
+    border-style: none;
+    padding-bottom: 16px;
+}
+.education h4, .employment h4 {
+    margin-bottom: 0;
+}
+.education h5, .employment h5 {
+    margin-top: 0;
+}
+
+/*Code Container*/
+.underlay {
+    visibility: hidden;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .4);
+    z-index: 1;
+}
+.codeContainer {
+    position: relative;
+    height: 80%;
+    width: 80%;
+}
+.codeContainer .codeContent {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+}
+.codeContainer .codeContent pre {
+    margin: 0px;
+}
+.codeContainer .codeContent pre code {
+    padding: 1%;
+    white-space: pre-wrap;
+}
+.codeContainer .codeButton {
+    position: absolute;
+    top: 0px;
+    right: 17px;
+}
+/*Medium*/
+@media screen and (min-width: 601) and (max-width: 992) {
+    /*Content*/
+    .content {
+        max-width: 100%;
+    }
+
+    /*Code Container*/
+    .codeContainer {
+        width: 100%;
+    }
+
+    .codeContainer .codeButton {
+        right: 0px;
+    }
+}
+/*Small*/
+@media screen and (max-width: 600) {
+    /*Content*/
+    .content {
+        max-width: 100%;
+    }
+
+    /*Code Container*/
+    .codeContainer {
+        width: 100%;
+    }
+
+    .codeContainer .codeButton {
+        right: 0px;
+    }
+}
