@@ -93,7 +93,10 @@
     width: 25%;
     padding: 8px;
 }
-.projectPhotos img {
+.projectSlides {
+    display: inline-block;
+}
+.projectSlides img {
     height: auto;
     max-width: 100%;
 }
