@@ -11,7 +11,7 @@ function showSlide(id, n) {
     console.log(slides);
     for (var i = 0; i < slides.length; i++) {
         $(slides[i]).css('display', 'none');
-        $(markers[n]).css('pointer-events', 'all');
+        $(markers[i]).css('pointer-events', 'all');
         $(markers[i]).addClass('w3-opacity');
     }
 
