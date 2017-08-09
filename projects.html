@@ -35,14 +35,17 @@
                     <button class="w3-button w3-blue w3-hover-indigo" id="particleButton">Example</button>
                 </div>
                 <div class="projectPhotos">
-                    <div class="projectSlide particleSlide">
+                    <div class="particleSlide">
                         <img src="photos/filter_out_compressed.gif" height="480" width="270">
-                        <figcaption>Particle Filter tracking of an ant.</figcaption>
                     </div>
                     
-                    <div class="projectSlide particleSlide">
+                    <div class="particleSlide">
                         <img src="photos/filter_occlusion.gif" height="480" width="270">
-                        <figcaption>Occlusion demonstration while tracking a red ball.</figcaption>
+                    </div>
+
+                    <div class="bar">
+                        <button class="particleMarker w3-button w3-blue w3-hover-indigo" onclick="showSlide(0, 0)"></button>
+                        <button class="particleMarker w3-button w3-blue w3-hover-indigo" onclick="showSlide(0, 1)"></button>
                     </div>
                 </div>
                 <div class="projectDescription">
@@ -67,7 +70,9 @@
                 <div class="projectPhotos">
                     <div class="projectSlide gatherSlide">
                         <img src="photos/gathermate_1.png" height="480" width="270">
-                        <figcaption>Main Activity</figcaption>
+                    </div>
+                    <div class="bar">
+                        <button class="gatherMarker w3-button w3-blue w3-hover-indigo" onclick="showSlide(1, 0)"></button>
                     </div>
                 </div>
                 <div class="projectDescription">

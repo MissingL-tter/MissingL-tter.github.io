@@ -93,9 +93,20 @@
     width: 25%;
     padding: 8px;
 }
-.projectSlide img {
+.projectPhotos img {
     height: auto;
     max-width: 100%;
+}
+.projectPhotos button {
+    float: left;
+    margin: 0px;
+    padding: 4px;
+}
+.particleMarker {
+    width: 50%;
+}
+.gatherMarker {
+    width: 100%;
 }
 .projectDescription {
     float: left;

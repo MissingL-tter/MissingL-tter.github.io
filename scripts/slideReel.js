@@ -1,26 +1,19 @@
-index = [0, 0];
-names = ["particleSlide", "gatherSlide"];
+var index = [0, 0];
+var names = ['.particleSlide', '.gatherSlide'];
+var markerNames = ['.particleMarker', '.gatherMarker'];
 for (var i = 0; i < index.length; i++) {
     showSlide(i, index[i]);
 }
 
-// ID is the position of the content on the page
-// n is the incremenet of the slide in the reel
-function changeSlide(id, n) {
-    showSlide(id, index[id] += n);
-}
-
 function showSlide(id, n) {
-    var slides = document.getElementsByClassName(names[id]);
+    var slides = $(names[id]);
+    var markers = $(markerNames[id]);
+    console.log(slides);
     for (var i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+        $(slides[i]).css('display', 'none');
+        $(markers[i]).removeClass('w3-disabled');
     }
 
-    if (n >= slides.length) {
-        index[id] = 0;
-    }    
-    if (n < 0) {
-        index[id] = slides.length - 1;
-    }
-    slides[index[id]].style.display = "inline-block";
+    $(slides[n]).css('display','inline-block');
+    $(markers[n]).addClass('w3-disabled');
 }
