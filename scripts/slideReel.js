@@ -11,9 +11,11 @@ function showSlide(id, n) {
     console.log(slides);
     for (var i = 0; i < slides.length; i++) {
         $(slides[i]).css('display', 'none');
-        $(markers[i]).removeClass('w3-disabled');
+        $(markers[n]).css('pointer-events', 'all');
+        $(markers[i]).addClass('w3-opacity');
     }
 
     $(slides[n]).css('display','inline-block');
-    $(markers[n]).addClass('w3-disabled');
+    $(markers[n]).css('pointer-events', 'none');
+    $(markers[n]).removeClass('w3-opacity');
 }
