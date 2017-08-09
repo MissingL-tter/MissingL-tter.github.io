@@ -1,8 +1,39 @@
-/*Content*/
-.content {
-    max-width: 80%;
+/* Title */
+.title {
+    text-align: center;
 }
 
+/* Header */
+.header {
+    padding: 0px 8px;
+}
+.bar {
+    width:100%;
+    padding-bottom: 16px;
+    overflow:hidden;
+}
+.bar::before, .bar::after {
+    content:"";
+    display:table;
+    clear:both;
+}
+.bar a {
+    display:block;
+    padding:8px 16px;
+    float:left;
+    width:50%;
+    margin: 0px;
+}
+.bar a h4 {
+    margin: 0px;
+}
+
+/* Content */
+.content {
+    max-width: 80%;
+    margin: auto;
+    margin-top: 16px;
+}
 .education h4, .employment h4 {
     margin-bottom: 0;
 }
@@ -29,7 +60,48 @@
     margin-top: 0;
 }
 
-/*Code Container*/
+/* Project */
+.projectCard {
+    position: relative;
+    padding: 8px;
+    margin:  16px 8px;
+}
+.projectCard::before, .projectCard::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.projectCard h3 {
+    margin: 0px;
+    padding: 8px;
+}
+.projectCard button {
+    position: absolute;
+    margin: 8px;
+    top: 0%;
+    right: 0%;
+}
+.projectPhotos {
+    position: relative;
+    text-align: center;
+    float: left;
+    width: 33.333%;
+    padding: 8px;
+}
+.projectSlide {
+    position: relative;
+}
+.projectSlide img {
+    height: auto;
+    max-width: 100%;
+}
+.projectDescription {
+    float: left;
+    width: 66.666%;
+    padding: 8px;
+}
+
+/* Code Container */
 .underlay {
     visibility: hidden;
     position: fixed;
@@ -65,7 +137,14 @@
     top: 0px;
     right: 17px;
 }
-/*Medium*/
+
+/* Footer */
+.footer {
+    padding: 0px 8px;
+    text-align: center;
+}
+
+/* Medium */
 @media screen and (min-width: 601px) and (max-width: 992px) {
     /*Content*/
     .content {
@@ -76,12 +155,11 @@
     .codeContainer {
         width: 100%;
     }
-
     .codeContainer .codeButton {
         right: 0px;
     }
 }
-/*Small*/
+/* Small */
 @media screen and (max-width: 600px) {
     /*Content*/
     .content {
@@ -92,7 +170,6 @@
     .codeContainer {
         width: 100%;
     }
-
     .codeContainer .codeButton {
         right: 0px;
     }

@@ -1,11 +1,11 @@
 index = [0, 0];
-names = ["particleSlides", "gatherSlides"];
+names = ["particleSlide", "gatherSlide"];
 for (var i = 0; i < index.length; i++) {
     showSlide(i, index[i]);
 }
 
 // ID is the position of the content on the page
-// n is the position of the slide in the reel
+// n is the incremenet of the slide in the reel
 function changeSlide(id, n) {
     showSlide(id, index[id] += n);
 }

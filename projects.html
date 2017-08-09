@@ -12,91 +12,74 @@
     <body class="body">
 
         <!-- Title -->
-        <div class="title w3-center">
+        <div class="title">
             <h2>Christopher Desmond</h2>
             <h5 class="w3-opacity"><a href="mailto:434a44@gmail.com" style="text-decoration: none">434a44@gmail.com</a></h5>
         </div>
 
         <!-- Fixed Header -->
-        <div class="header w3-container w3-white">
-
-            <div id="buttons" class="w3-bar w3-border-bottom w3-border-blue" style="padding-bottom: 16px">
-                <h4 style="margin: 0">
-                    <a href="/" class="w3-bar-item w3-button w3-hover-indigo" style="width: 50%">About</a>
-                </h4>
-                <h4 style="margin: 0">
-                    <a class="w3-bar-item w3-button w3-border-bottom w3-border-blue w3-hover-indigo" style="width: 50%">Projects</a>
-                </h4>
+        <div class="header w3-white">
+            <div class="bar w3-border-bottom w3-border-blue">
+                <a class="w3-button w3-border-bottom w3-border-blue w3-hover-indigo" href="/" style="text-decoration: none"><h4>About</h4></a>
+                <a class="w3-button w3-hover-indigo" style="text-decoration: none"><h4>Projects</h4></a>
             </div>
-
         </div>
 
         <!-- Content -->
-        <div class="content w3-container w3-content">
+        <div class="content">
 
             <!-- Particle Filter -->
-            <div class="w3-panel w3-card" style>
-                <div class="w3-bar">
-                    <h3 class="w3-bar-item">Particle Filter</h3>
-                    <h5 class="w3-bar-item w3-button w3-right w3-blue w3-hover-indigo" id="particleButton">Example</h5>
-                </div>
-                <div class="w3-panel w3-display-container w3-center w3-col l4 m6 s12">
-
-                    <div class="particleSlides w3-display-container">
-                        <img class="w3-image w3-round" src="photos/filter_out_compressed.gif" height="640px" width="360px">
-                        <div class="w3-display-bottom w3-small" style="width:100%">Particle Filter tracking of an ant.</div>
+            <div class="projectCard w3-card">
+                <h3>Particle Filter</h3>
+                <button class="w3-button w3-blue w3-hover-indigo" id="particleButton">Example</button>
+                <div class="projectPhotos">
+                    <div class="projectSlide particleSlide">
+                        <img src="photos/filter_out_compressed.gif">
+                        <figcaption>Particle Filter tracking of an ant.</figcaption>
                     </div>
                     
-                    <div class="particleSlides w3-display-container">
-                        <img class="w3-image w3-round" src="photos/filter_occlusion.gif" height="640px" width="360px">
-                        <div class="w3-display-bottom w3-small" style="width:100%">Occlusion demonstration while tracking a red ball.</div>
+                    <div class="projectSlide particleSlide">
+                        <img src="photos/filter_occlusion.gif">
+                        <figcaption>Occlusion demonstration while tracking a red ball.</figcaption>
                     </div>
-
-                    <div class="w3-button w3-display-left w3-hover-indigo" onclick="changeSlide(0, -1)">&#10094;</div>
-                    <div class="w3-button w3-display-right w3-hover-indigo" onclick="changeSlide(0, 1)">&#10095;</div>
                 </div>
-
-                <ul class="w3-ul w3-col l8 m6 s12">
-                    <li>Developed in C++ using the ArrayFire library, Prototyping done in Matlab</li>
-                    <li>Developed a GPU-accelerated Particle Filter for use in tracking moving objects in video.
-                        This model is based on a template image of the object being tracked and can be used for many different applications.
-                        The goal was to maintain accuracy of tracking while reducing tracking times.</li>
-                    <li>Parallelizing for GPU significantly accelerated the task over conventional serial methods.
-                        This is done by collecting the image patches for each particle in parallel and vectorizing the calculations that determine the probability that the object is located at that particle.</li>
-                    <li>Further works needs to be done to optimize for multi-object tracking and improve the robustness of the template matching.</li>
-                </ul>
+                <div class="projectDescription">
+                    <ul class="w3-ul">
+                        <li>Developed in C++ using the ArrayFire library, Prototyping done in Matlab</li>
+                        <li>Developed a GPU-accelerated Particle Filter for use in tracking moving objects in video.
+                            This model is based on a template image of the object being tracked and can be used for many different applications.
+                            The goal was to maintain accuracy of tracking while reducing tracking times.</li>
+                        <li>Parallelizing for GPU significantly accelerated the task over conventional serial methods.
+                            This is done by collecting the image patches for each particle in parallel and vectorizing the calculations that determine the probability that the object is located at that particle.</li>
+                        <li>Further works needs to be done to optimize for multi-object tracking and improve the robustness of the template matching.</li>
+                    </ul>
+                </div>
             </div>
 
             <!-- GatherMate -->
-            <div class="w3-panel w3-card">
-                <div class="w3-bar">
-                    <h3 class="w3-bar-item">GatherMate</h3>
-                    <h5><a href="https://github.com/MissingL-tter/GatherMate" class="w3-bar-item w3-button w3-right w3-blue w3-hover-indigo">Repository</a></h5>
-                </div>
-
-                <div class="w3-panel w3-display-container w3-center w3-col l4 m6 s12">
-
-                    <div class="gatherSlides w3-display-container">
-                        <img class="w3-image w3-round" src="photos/gathermate_1.png" height="640px" width="360px">
-                        <div class="w3-display-bottom w3-small" style="width:100%">Main Activity</div>
+            <div class="projectCard w3-card">
+                <h3>GatherMate</h3>
+                <button class="w3-button w3-blue w3-hover-indigo"><a href="https://github.com/MissingL-tter/GatherMate">Repository</a></button>
+                <div class="projectPhotos">
+                    <div class="projectSlide gatherSlide">
+                        <img src="photos/gathermate_1.png" height="640" width="360">
+                        <figcaption>Main Activity</figcaption>
                     </div>
-
-                    <!-- <div class="w3-button w3-display-left w3-hover-indigo" onclick="changeSlide(1, -1)">&#10094;</div> -->
-                    <!-- <div class="w3-button w3-display-right w3-hover-indigo" onclick="changeSlide(1, 1)">&#10095;</div> -->
                 </div>
-
-                <ul class="w3-ul w3-col l8 m6 s12">
-                    <li>Developed in Android Studio (Java) using Firebase and Google Maps API.</li>
-                    <li>This is a prototype application for spontaneous event scheduling.
-                        Each user can create events that are visible to friends. Friends can be added via username or email and are shown any events that their friends create.</li>
-                    <li>Each event opens a details page that contains a map view and other information about the event. Navigation to the event can be started from the map view and will open in Google Maps.</li>
-                    <li>Timers countdown to indicate when an event starts. Colored travel times indicate whether you can make it to an event on time and are updated from current traffic conditions via the Maps API.</li>
-                </ul>
+                <div class="projectDescription">
+                    <ul class="w3-ul">
+                        <li>Developed in Android Studio (Java) using Firebase and Google Maps API.</li>
+                        <li>This is a prototype application for spontaneous event scheduling.
+                            Each user can create events that are visible to friends. Friends can be added via username or email and are shown any events that their friends create.</li>
+                        <li>Each event opens a details page that contains a map view and other information about the event. Navigation to the event can be started from the map view and will open in Google Maps.</li>
+                        <li>Timers countdown to indicate when an event starts. Colored travel times indicate whether you can make it to an event on time and are updated from current traffic conditions via the Maps API.</li>
+                    </ul>
+                </div>
             </div>
         </div>
         
         <!-- Fixed Footer -->
-        <div class="w3-container w3-center w3-border-top w3-border-blue w3-white" id="footer">
+        <div class="footer w3-border-top w3-border-blue w3-white">
             
             <div class="w3-left w3-button w3-opacity w3-hide-small" style="margin-top: 8px; margin-bottom: 8px">
                 <img src="icons/github.svg" height="24" width="24" style="display:inline"/>
