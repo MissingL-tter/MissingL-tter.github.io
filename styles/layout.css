@@ -40,6 +40,13 @@
     margin: auto;
     margin-top: 16px;
 }
+.info, .skills, .education, .employment {
+    padding: 8px;
+    margin:  16px 8px;
+}
+.info h3, .skills h3, .education h3, .employment h3 {
+    margin: 0px;
+}
 .education h4, .employment h4 {
     margin-bottom: 0;
 }
