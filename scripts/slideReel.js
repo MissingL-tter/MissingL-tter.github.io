@@ -1,5 +1,5 @@
-var index = [0, 0];
-var names = ['.particleSlide', '.gatherSlide'];
+var index = [0, 0, 0];
+var names = ['.particleSlide', '.gatherSlide', '.gonnSlide'];
 var markerNames = ['.particleMarker', '.gatherMarker'];
 for (var i = 0; i < index.length; i++) {
     showSlide(i, index[i]);

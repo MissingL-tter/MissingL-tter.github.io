@@ -28,6 +28,32 @@
         <!-- Content -->
         <div class="content">
 
+            <!-- GoNN -->
+            <div class="projectCard w3-card">
+                <div class="bar">
+                    <h3>Current Project - GoNN</h3>
+                    <button class="w3-button w3-blue w3-hover-indigo"><a href="https://github.com/MissingL-tter/GoNN" target="_blank">Repository</a></button>
+                </div>
+                <div class="projectPhotos">
+                    <div class="projectSlides">
+                        <div class="gonnSlide">
+                            <img src="photos/gonn.png" height="480" width="270">
+                        </div>
+                        <div class="bar">
+                            <button class="gatherMarker w3-button w3-blue w3-hover-indigo" onclick="showSlide(1, 0)">0</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="projectDescription">
+                    <ul class="w3-ul">
+                        <li>GoNN is a minimalist Neural Network package for Go, a personal project that I am currently developing.</li>
+                        <li>The plan is to develop a simple and easy to understand Neural Network package that will enable users to easily set up and test a network.</li>
+                        <li>The source will not be highly optimizeed for speed, but easy to read through and understand what is happening at each step. There will be some sacrifice in training times, but it should be sufficient for many tasks.</li>
+                        <li>I plan to use this package and Go as the backend for a web tool that vizualizes the network and provides users with a means to create and see the results of various network structures.</li>
+                    </ul>
+                </div>
+            </div>
+
             <!-- Particle Filter -->
             <div class="projectCard w3-card">
                 <div class="bar">
@@ -39,7 +65,6 @@
                         <div class="particleSlide">
                             <img src="photos/filter_out_compressed.gif" height="480" width="270">
                         </div>
-                    
                         <div class="particleSlide">
                             <img src="photos/filter_occlusion.gif" height="480" width="270">
                         </div>
