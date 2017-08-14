@@ -89,7 +89,7 @@
     margin: 0px;
     padding: 8px 16px;
 }
-.projectCard button {
+.projectCard .source {
     float: right;
     margin: 8px;
 }
