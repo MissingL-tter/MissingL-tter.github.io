@@ -113,8 +113,14 @@
     padding: 4px;
     font-size: 10px;
 }
+.ritualMarker {
+    width: 33.333%;
+}
 .particleMarker {
     width: 50%;
+}
+.gonnMarker {
+    width: 100%;
 }
 .gatherMarker {
     width: 100%;
