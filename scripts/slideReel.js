@@ -8,7 +8,6 @@ for (var i = 0; i < index.length; i++) {
 function showSlide(id, n) {
     var slides = $(names[id]);
     var markers = $(markerNames[id]);
-    console.log(slides);
     for (var i = 0; i < slides.length; i++) {
         $(slides[i]).css('display', 'none');
         $(markers[i]).css('pointer-events', 'all');
