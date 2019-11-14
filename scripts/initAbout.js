@@ -1,3 +1,5 @@
+import M from 'materialize-css';
+
 // NavBar Init
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.sidenav');
