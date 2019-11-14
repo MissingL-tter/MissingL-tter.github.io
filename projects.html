@@ -1,0 +1,193 @@
+<!--Design and Scripting by Christopher Desmond -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"> 
+        <title>C. Desmond</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/styles/vs2015.css">
+    </head>
+    <body class="body">
+
+        <!-- Title -->
+        <div class="title">
+            <h2>Christopher Desmond</h2>
+            <h5 class="w3-opacity"><a href="mailto:434a44@gmail.com" style="text-decoration: none">434a44@gmail.com</a></h5>
+        </div>
+
+        <!-- Fixed Header --> 
+        <div class="header w3-white">
+            <div class="bar w3-border-bottom w3-border-blue">
+                <a class="w3-button w3-hover-indigo" href="about.html" style="text-decoration: none"><h4>About</h4></a>
+                <a class="w3-button w3-border-bottom w3-border-blue w3-hover-indigo" style="text-decoration: none"><h4>Projects</h4></a>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+
+            <!-- Ritual Master -->
+            <div class="projectCard w3-card">
+                <div class="bar">
+                    <h3>Ritual Master - In Development</h3>
+                    <a class="source w3-button w3-blue w3-hover-indigo" href="https://github.com/MissingL-tter/Ritual-Master" target="_blank">Repository</a>
+                </div>
+                <div class="projectPhotos">
+                    <div class="projectSlides">
+                        <div class="ritualSlide">
+                            <img src="/photos/ritualMaster5.png" height="480" width="270">
+                        </div>
+                        <div class="ritualSlide">
+                            <img src="/photos/ritualMaster6.png" height="480" width="270">
+                        </div>
+                        <div class="ritualSlide">
+                            <img src="/photos/ritualMaster9.png" height="480" width="270">
+                        </div>
+                        <div class="bar">
+                            <button class="ritualMarker w3-button w3-blue w3-hover-indigo" onclick="showSlide(0, 0)">0</button>
+                            <button class="ritualMarker w3-button w3-blue w3-hover-indigo" onclick="showSlide(0, 1)">1</button>
+                            <button class="ritualMarker w3-button w3-blue w3-hover-indigo" onclick="showSlide(0, 2)">2</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="projectDescription">
+                    <ul class="w3-ul">
+                        <li>Developed in Unity using C#</li>
+                        <li>Ritual Master was originally developed as a desktop application at Global Game Jam. After exhibiting at PlayThrough Game Convention we found that users enjoyed the puzzles much more than the other features of the game. 
+                            Listening to that feedback we decided to pivot and make a mobile game centered around those puzzles.</li>
+                        <li>The puzzles consist of mastermind style game play growing in difficulty through size and number of resources. 
+                            The star pattern is drawn dynamically based on the number of sockets. This allows us to scale the difficulty of various levels and modes without needing excess assets.</li>
+                        <li>The goal of the user is to find the correct pattern to complete the ritual</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Particle Filter -->
+            <div class="projectCard w3-card">
+                <div class="bar">
+                    <h3>Particle Filter</h3>
+                    <button class="source w3-button w3-blue w3-hover-indigo" id="particleButton">Example</button>
+                </div>
+                <div class="projectPhotos">
+                    <div class="projectSlides">
+                        <div class="particleSlide">
+                            <img src="/photos/filterOut.gif" height="480" width="270">
+                        </div>
+                        <div class="particleSlide">
+                            <img src="/photos/filterOcclusion.gif" height="480" width="270">
+                        </div>
+                        <div class="bar">
+                            <button class="particleMarker w3-button w3-blue w3-hover-indigo" onclick="showSlide(1, 0)">0</button>
+                            <button class="particleMarker w3-button w3-blue w3-hover-indigo" onclick="showSlide(1, 1)">1</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="projectDescription">
+                    <ul class="w3-ul">
+                        <li>Developed in C++ using the ArrayFire library, Prototyping done in Matlab</li>
+                        <li>Developed a GPU-accelerated Particle Filter for use in tracking moving objects in video.
+                            This model is based on a template image of the object being tracked and can be used for many different applications.
+                            The goal was to maintain accuracy of tracking while reducing tracking times.</li>
+                        <li>Parallelizing for GPU significantly accelerated the task over conventional serial methods.
+                            This is done by collecting the image patches for each particle in parallel and vectorizing the calculations that determine the probability that the object is located at that particle.</li>
+                        <li>Further works needs to be done to optimize for multi-object tracking and improve the robustness of the template matching.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- GoNN -->
+            <div class="projectCard w3-card">
+                <div class="bar">
+                    <h3>GoNN - In Development</h3>
+                    <a class="source w3-button w3-blue w3-hover-indigo" href="https://github.com/MissingL-tter/GoNN" target="_blank">Repository</a>
+                </div>
+                <div class="projectPhotos">
+                    <div class="projectSlides">
+                        <div class="gonnSlide">
+                            <img src="/photos/GoNN.png" height="480" width="270">
+                        </div>
+                        <div class="bar">
+                            <button class="gonnMarker w3-button w3-blue w3-hover-indigo" onclick="showSlide(2, 0)">0</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="projectDescription">
+                    <ul class="w3-ul">
+                        <li>GoNN is a minimalist Neural Network package for Go, a personal project that I am currently developing.</li>
+                        <li>The plan is to develop a simple and easy to understand Neural Network package that will enable users to easily set up and test a network.</li>
+                        <li>The source will not be highly optimized for speed, but easy to read through and understand what is happening at each step. There will be some sacrifice in training times, but it should be sufficient for many tasks.</li>
+                        <li>I plan to use this package and Go as the backend for a web tool that visualizes the network and provides users with a means to create and see the results of various network structures.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- GatherMate -->
+            <div class="projectCard w3-card">
+                <div class="bar">
+                    <h3>GatherMate</h3>
+                    <a class="source w3-button w3-blue w3-hover-indigo" href="https://github.com/MissingL-tter/GatherMate" target="_blank">Repository</a>
+                </div>
+                <div class="projectPhotos">
+                    <div class="projectSlides">
+                        <div class="gatherSlide">
+                            <img src="/photos/gatherMate.png" height="480" width="270">
+                        </div>
+                        <div class="bar">
+                            <button class="gatherMarker w3-button w3-blue w3-hover-indigo" onclick="showSlide(3, 0)">0</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="projectDescription">
+                    <ul class="w3-ul">
+                        <li>Developed in Android Studio (Java) using Firebase and Google Maps API.</li>
+                        <li>This is a prototype application for spontaneous event scheduling.
+                            Each user can create events that are visible to friends. Friends can be added via username or email and are shown any events that their friends create.</li>
+                        <li>Each event opens a details page that contains a map view and other information about the event. Navigation to the event can be started from the map view and will open in Google Maps.</li>
+                        <li>Timers countdown to indicate when an event starts. Colored travel times indicate whether you can make it to an event on time and are updated from current traffic conditions via the Maps API.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Fixed Footer -->
+        <div class="footer w3-border-top w3-border-blue w3-white">
+            <div class="w3-button w3-opacity w3-hide-small" id="github">
+                <img src="/icons/github.svg" height="24" width="24"/>
+                <a href="https://github.com/MissingL-tter/" style="text-decoration:none">MissingL-tter</a>
+            </div>
+
+            <a href="resources/resume.pdf" target="_blank" class="w3-button w3-blue w3-hover-indigo">Resume</a>
+
+            <div class="w3-button w3-opacity w3-hide-small" id="twitter">
+                <img src="/icons/twitter.png" height="24" width="24"/>
+                <a href="https://twitter.com/MissingL_tter" style="text-decoration:none">MissingL_tter</a>
+            </div>
+        </div>
+
+        <!-- Code Containers -->
+        <div class="underlay" id="particleCode">
+            <div class="codeContainer">
+                <button class="codeButton w3-button w3-blue">&times</button>
+                <div class="codeContent" id="particleCodeContent"></div>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="/scripts/highlight.pack.js"></script>
+        <script>
+            hljs.configure({
+                tabReplace: '    ', // 4 spaces
+            })
+        </script>
+
+        <!-- Script to manage Modal loading -->
+        <script src="/scripts/codeContainer.js"></script>
+        
+        <!-- Script to manage Content placement on small screens -->
+        <script src="/scripts/collapseHead.js"></script>
+
+        <!-- Script to manage slides for each project -->
+        <script src="/scripts/slideReel.js"></script>
+    </body>
+</html>
