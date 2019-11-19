@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel index.html",
+    "predeploy": "rmdir /S dist && parcel build index.html",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,8 @@
     "typeface-roboto": "0.0.75"
   },
   "devDependencies": {
-    "less": "^3.10.3"
+    "gh-pages": "^2.1.1",
+    "parcel": "^1.12.4",
+    "cssnano": "^4.1.10"
   }
 }
