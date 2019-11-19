@@ -205,49 +205,70 @@
             </div>
         </main>
 
-        <main id="projects">
+        <main id="projects" style="margin-top: 11.25px;">
             <div class="container">
                 <div class="row">
 
-                    <!-- Ritual Master -->
+                    <!-- Vision Factory -->
                     <div class="col s12 m6 l4">
                         <div class="card large">
-                            <div class="card-image">
-                                <img class="materialboxed" src="/photos/ritualMaster5.png" style="transform: translateY(-150px);">
+                            <div class="card-image valign-wrapper" style="height: 60%;">
+                                <img class="materialboxed" src="/photos/vf_sample.png">
                             </div>
+                            <div class="divider"></div>
                             <div class="card-content">
                                 <span class="card-title activator">
-                                    Ritual Master
+                                    Vision Factory
                                     <i class="material-icons right">more_vert</i>
                                 </span>
-                                <p>Game Jam project redesigned for mobile based on feedback.</p>
+                                <p>User friendly, reduced feature set version of core software product.</p>
                             </div>
                             <div class="card-reveal">
                                 <span class="card-title">
-                                    Ritual Master
+                                    Vision Factory
                                     <i class="material-icons right">close</i>
                                 </span>
                                 <div>
-                                    <p>
-                                        Built using C# in Unity.
-                                    </p>
-                                    <p>
-                                        Dynamic puzzle drawing maximizes asset resuse regardless of puzzle difficulty.
-                                    </p>
-                                    <p>
-                                        Gameplay consists of mastermind style puzzles, growing in difficulty through size and number of resources.
-                                    </p>
-                                    <p>
-                                        Presented at the first Playthrough Game Convention.
-                                        Feedback indicated that people enjoyed the puzzle aspects of the game but felt other aspects were tedious.
-                                    </p>
-                                    <p>
-                                        Originally designed as a desktop application during Global Game Jam. We redesigned it as a mobile game based on that feedback.
-                                    </p>
+                                    <p>Front-end developed with WPF using C# and XAML. Connected to back-end with .Net CPP/CLI interop.</p>
+                                    <p>Improved UX version of Pro software with a reduced feature set for our SME clients.</p>
+                                    <p>Designed and implemented the UI and UX improvements. Contributed to the interop/back-end development.</p>
+                                    <p>This is a lite software offering built for small to medium enterprise clients that don't make use of system integrators or need faster system set-ups.</p>
                                 </div>
                             </div>
                             <div class="card-action">
-                                <a href="https://github.com/MissingL-tter/Ritual-Master" target="_blank">Repo</a>
+                                <a target="_blank" style="pointer-events: none;">N/A</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- VF Data -->
+                    <div class="col s12 m6 l4">
+                        <div class="card large">
+                            <div class="card-image valign-wrapper" style="height: 60%;">
+                                <img class="materialboxed responsive-img" src="/photos/vfdata_sample.png">
+                            </div>
+                            <div class="divider"></div>
+                            <div class="card-content">
+                                <span class="card-title activator">
+                                    VF Data
+                                    <i class="material-icons right">more_vert</i>
+                                </span>
+                                <p>Data analytics app for visualization of Vision Factory data.</p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title">
+                                    VF Data
+                                    <i class="material-icons right">close</i>
+                                </span>
+                                <div>
+                                    <p>Interface built with Dash/Plotly in Python. REST API implemented with Flask.</p>
+                                    <p>Web app used to visualize data captured by Vision Factory products. Data is recieved through API calls and stored in a SQL database.</p>
+                                    <p>Updates in realtime and runs fully independent of Vision Factory. Live updates can be disabled to perform date filtering on all data.</p>
+                                    <p>Calculates critical information including average cycle times, average deviation distance, failure rates, etc.</p>
+                                </div>
+                            </div>
+                            <div class="card-action disabled">
+                                <a target="_blank" style="pointer-events: none;">N/A</a>
                             </div>
                         </div>
                     </div>
@@ -436,7 +457,7 @@ return 0;
                     <div class="col s12 m6 l4">
                         <div class="card large">
                             <div class="card-image">
-                                <img class="materialboxed" src="/photos/gatherMate.png" style="transform: translateY(-150px);">
+                                <img class="materialboxed" src="/photos/gatherMate.png">
                             </div>
                             <div class="card-content">
                                 <span class="card-title activator">
@@ -462,6 +483,50 @@ return 0;
                             </div>
                         </div>
                     </div>
+
+                    <!-- Ritual Master -->
+                    <div class="col s12 m6 l4">
+                        <div class="card large">
+                            <div class="card-image">
+                                <img class="materialboxed" src="/photos/ritualMaster5.png" style="transform: translateY(-150px);">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator">
+                                    Ritual Master
+                                    <i class="material-icons right">more_vert</i>
+                                </span>
+                                <p>Game Jam project redesigned for mobile based on feedback.</p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title">
+                                    Ritual Master
+                                    <i class="material-icons right">close</i>
+                                </span>
+                                <div>
+                                    <p>
+                                        Built using C# in Unity.
+                                    </p>
+                                    <p>
+                                        Dynamic puzzle drawing maximizes asset resuse regardless of puzzle difficulty.
+                                    </p>
+                                    <p>
+                                        Gameplay consists of mastermind style puzzles, growing in difficulty through size and number of resources.
+                                    </p>
+                                    <p>
+                                        Presented at the first Playthrough Game Convention.
+                                        Feedback indicated that people enjoyed the puzzle aspects of the game but felt other aspects were tedious.
+                                    </p>
+                                    <p>
+                                        Originally designed as a desktop application during Global Game Jam. We redesigned it as a mobile game based on that feedback.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card-action">
+                                <a href="https://github.com/MissingL-tter/Ritual-Master" target="_blank">Repo</a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </main>
