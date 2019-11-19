@@ -6,7 +6,7 @@
   "scripts": {
     "start": "parcel index.html",
     "predeploy": "rmdir /S dist && parcel build index.html",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -b master -d dist"
   },
   "repository": {
     "type": "git",
