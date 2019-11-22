@@ -33,9 +33,6 @@
     "cssnano": "^4.1.10"
   },
   "staticFiles": {
-    "staticPath": "copy",
-    "globOptions": {
-      "dot": true
-    }
+    "staticPath": "copy"
   }
 }
